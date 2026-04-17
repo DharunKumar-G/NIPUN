@@ -13,6 +13,7 @@ from app.components import setup_page, render_footer
 setup_page("Send your BEOs here this week")
 
 import streamlit as st
+import plotly.graph_objects as go
 from app.services.data_loader import (
     get_states, get_districts, get_blocks, load_schools, get_latest_year,
 )
@@ -69,7 +70,8 @@ if ranked.empty:
 
 n_schools = len(ranked)
 n_show = min(top_n, n_schools)
-top_n_df = ranked.head(n_show)
+top_n_df = ranked.head(n_show).copy()
+top_n_df["total"] = n_schools
 
 # ── Above-the-fold hero — Section 8.2 ────────────────────────────────────────
 st.markdown(
@@ -104,8 +106,82 @@ k4.metric(
 
 st.divider()
 
+# ── Scatter overview — all schools mapped ─────────────────────────────────────
+def _urgency(score: float) -> str:
+    s = score * 100
+    return "URGENT" if s >= 70 else ("MONITOR" if s >= 45 else "REVIEW")
+
+def _urgency_color(u: str) -> str:
+    return {"URGENT": "#C2362F", "MONITOR": "#E76F24", "REVIEW": "#4A7C59"}[u]
+
+scatter_df = ranked.copy()
+scatter_df["urgency"] = scatter_df["score"].apply(_urgency)
+scatter_df["score_pct"] = (scatter_df["score"] * 100).round(1)
+scatter_df["color"] = scatter_df["urgency"].apply(_urgency_color)
+scatter_df["in_top"] = scatter_df["rank"] <= n_show
+
+fig_scatter = go.Figure()
+
+for urgency_label, color in [("URGENT", "#C2362F"), ("MONITOR", "#E76F24"), ("REVIEW", "#4A7C59")]:
+    sub = scatter_df[scatter_df["urgency"] == urgency_label]
+    if sub.empty:
+        continue
+    fig_scatter.add_trace(go.Scatter(
+        x=sub["reading_gap"],
+        y=sub["math_gap"],
+        mode="markers",
+        name=urgency_label,
+        marker=dict(
+            size=sub["score_pct"] / 4 + 6,
+            color=color,
+            opacity=sub["in_top"].apply(lambda t: 0.95 if t else 0.45).tolist(),
+            line=dict(
+                color=sub["in_top"].apply(lambda t: "#0F3057" if t else "rgba(0,0,0,0)").tolist(),
+                width=sub["in_top"].apply(lambda t: 2 if t else 0).tolist(),
+            ),
+        ),
+        customdata=sub[["school_name", "block", "score_pct", "rank"]].values,
+        hovertemplate=(
+            "<b>%{customdata[0]}</b><br>"
+            "Block: %{customdata[1]}<br>"
+            "Reading gap: %{x:.1f} pp<br>"
+            "Math gap: %{y:.1f} pp<br>"
+            "Priority score: %{customdata[2]:.0f}/100<br>"
+            "Rank: #%{customdata[3]}<extra></extra>"
+        ),
+    ))
+
+fig_scatter.update_layout(
+    title=dict(
+        text=f"All {n_schools} schools — reading gap vs math gap<br>"
+             f"<span style='font-size:11px;color:#64748B'>Bright ring = in your top {n_show} · Size = priority score</span>",
+        font=dict(size=14, color="#0F3057"),
+    ),
+    xaxis=dict(title="Reading gap vs district avg (pp)", gridcolor="#EDEAE5", zeroline=True, zerolinecolor="#94A3B8"),
+    yaxis=dict(title="Math gap vs district avg (pp)",    gridcolor="#EDEAE5", zeroline=True, zerolinecolor="#94A3B8"),
+    plot_bgcolor="#FFFFFF",
+    paper_bgcolor="#F8F5F0",
+    font=dict(family="Inter, sans-serif", size=12),
+    legend=dict(
+        orientation="h",
+        yanchor="bottom", y=1.02,
+        xanchor="right",  x=1,
+        font=dict(size=11),
+    ),
+    height=400,
+    margin=dict(l=50, r=20, t=80, b=50),
+)
+
+st.plotly_chart(fig_scatter, use_container_width=True)
+st.caption(
+    "Each dot is a school. Upper-right corner = worst on both reading AND math. "
+    "Bright-outlined dots are in your active top list below."
+)
+
+st.divider()
+
 # ── WhatsApp bulk copy ────────────────────────────────────────────────────────
-with st.expander("Copy this week's list to WhatsApp"):
+with st.expander("📋 Copy this week's list to WhatsApp"):
     lines = [f"NIPUN Compass — {district} priority list ({year})\n"]
     for _, r in top_n_df.iterrows():
         reasons = []
@@ -126,11 +202,11 @@ st.subheader(f"Send your BEOs to these {n_show} schools this week")
 st.caption(
     "Score = reading gap × 0.35 + math gap × 0.30 + "
     "years declining × 0.20 + months since last visit × 0.15  ·  "
-    "Adjust weights in sidebar to match your priorities."
+    "Adjust weights in sidebar · Click **→ Diagnose** to drill into a school."
 )
 
 for _, row in top_n_df.iterrows():
-    render_school_card(row, show_whatsapp=True)
+    render_school_card(row, show_whatsapp=False)
 
 # ── Full ranked table ─────────────────────────────────────────────────────────
 with st.expander("See all ranked schools as a table"):

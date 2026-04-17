@@ -1,5 +1,5 @@
 /* NIPUN Compass — Section 8.3 color + typography rules */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 html, body, [class*="css"] {
     font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
@@ -13,32 +13,53 @@ html, body, [class*="css"] {
     background-color: #0F3057;
     color: #FFFFFF;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     font-weight: 600;
     font-size: 0.875rem;
+    padding: 0.45rem 1rem;
+    transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
 }
 .stButton > button:hover {
     background-color: #1a4a7a;
     color: #FFFFFF;
     border: none;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(15,48,87,0.3);
+}
+.stButton > button:active {
+    transform: translateY(0);
 }
 
 /* ── Metric cards ──────────────────────────────────────────── */
 [data-testid="stMetric"] {
     background-color: #FFFFFF;
     border: 1px solid #EDEAE5;
-    border-radius: 6px;
-    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    padding: 0.9rem 1.1rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s ease;
+}
+[data-testid="stMetric"]:hover {
+    box-shadow: 0 4px 16px rgba(15,48,87,0.1);
 }
 
-/* ── Priority card borders ─────────────────────────────────── */
+/* ── Metric label font ─────────────────────────────────────── */
+[data-testid="stMetricLabel"] {
+    font-size: 0.72rem !important;
+    font-weight: 600 !important;
+    color: #64748B !important;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* ── Container borders ─────────────────────────────────────── */
 [data-testid="stContainer"] {
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
 /* ── Sidebar ───────────────────────────────────────────────── */
 [data-testid="stSidebar"] {
-    background-color: #0F3057;
+    background: linear-gradient(180deg, #0F3057 0%, #0a2240 100%);
 }
 [data-testid="stSidebar"] * {
     color: #FFFFFF !important;
@@ -53,12 +74,20 @@ html, body, [class*="css"] {
 [data-testid="stSidebar"] .stMarkdown p {
     color: #CBD5E1 !important;
 }
+[data-testid="stSidebar"] .stSelectbox > div > div {
+    background-color: rgba(255,255,255,0.12) !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+    color: #FFFFFF !important;
+    border-radius: 6px;
+}
 
 /* ── Header accent bar ─────────────────────────────────────── */
 .nipun-header {
     border-left: 4px solid #E76F24;
-    padding-left: 1rem;
-    margin-bottom: 1rem;
+    padding-left: 1.25rem;
+    margin-bottom: 1.25rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
 }
 
 /* ── Status badges ─────────────────────────────────────────── */
@@ -75,6 +104,56 @@ html, body, [class*="css"] {
     min-width: 2.5rem;
 }
 
+/* ── NIPUN School Cards ────────────────────────────────────── */
+.nipun-card {
+    margin-bottom: 0.75rem;
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+.nipun-card:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.13) !important;
+    transform: translateY(-2px);
+}
+
+/* ── Score progress bar ────────────────────────────────────── */
+.score-track {
+    background: #E2E8F0;
+    border-radius: 4px;
+    height: 6px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+.score-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+/* ── Urgency pill badge ────────────────────────────────────── */
+.urgency-pill {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 2px 10px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+/* ── Intervention cards ────────────────────────────────────── */
+.intervention-card {
+    background: #FFFFFF;
+    border: 1px solid #EDEAE5;
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+.intervention-card:hover {
+    box-shadow: 0 8px 32px rgba(15,48,87,0.1);
+    transform: translateY(-2px);
+}
+
 /* ── Compact block-container ───────────────────────────────── */
 .block-container { padding-top: 1.25rem !important; }
 
@@ -87,4 +166,42 @@ html, body, [class*="css"] {
     font-size: 0.8rem;
     white-space: pre-wrap;
     border: 1px solid #B0D9A0;
+}
+
+/* ── Expander header ───────────────────────────────────────── */
+[data-testid="stExpander"] summary {
+    font-weight: 600;
+    color: #0F3057;
+}
+[data-testid="stExpander"]:hover summary {
+    color: #1a4a7a;
+}
+
+/* ── Info box ──────────────────────────────────────────────── */
+[data-testid="stAlert"] {
+    border-radius: 8px;
+    border-left-width: 4px;
+}
+
+/* ── Divider ───────────────────────────────────────────────── */
+hr { border-color: #EDEAE5 !important; margin: 1.25rem 0 !important; }
+
+/* ── Scatter plot wrapper ──────────────────────────────────── */
+.scatter-callout {
+    background: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #EDEAE5;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* ── KPI number pop ────────────────────────────────────────── */
+[data-testid="stMetricValue"] {
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+    color: #0F3057 !important;
+}
+[data-testid="stMetricDelta"] {
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
 }

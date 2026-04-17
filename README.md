@@ -2,95 +2,79 @@
 
 **The Monday-morning tool for District Education Officers.**
 
-> District Education Officers in low-performing states receive ASER reports every 2 years but have no tool to translate district-level learning data into school-level action plans. This means they spend hours manually scanning spreadsheets to build priority lists that are already outdated, and interventions end up reactive and poorly targeted — leading to the same states (Bihar, UP, Rajasthan) showing up at the bottom of every ASER cycle.
-
-**NIPUN Compass** turns 200-page ASER reports into a weekly school-visit list, a diagnosis for each failing school, and an intervention matched to your block budget — so DEOs stop reacting to 2-year-old data and start acting on it.
+[**Live Demo →**](https://YOUR_DEPLOY_URL_HERE) &nbsp;·&nbsp; [**Video Walkthrough →**](https://loom.com/share/YOUR_ID_HERE)
 
 ---
 
-## What It Does (in 30 seconds)
+## The Problem
 
-| Feature | DEO Question Answered |
-|---|---|
-| **Priority Queue** | Which 20 schools do I send BEOs to this week? |
-| **School Diagnosis** | For each school, what specifically is broken? |
-| **Intervention Recommender** | What can I fund that will actually move the needle? |
-| **Intervention Tracker** | 6 months later — did it work? |
-| **Monthly Review Builder** | What do I tell my DM at 3 PM? |
+District Education Officers in low-performing states receive ASER reports every 2 years but have no tool to translate district-level learning data into school-level action plans. This means they spend hours manually scanning spreadsheets to build priority lists that are already outdated, and interventions end up reactive and poorly targeted — leading to the same states (Bihar, UP, Rajasthan) showing up at the bottom of every ASER cycle.
 
 ---
 
-## Live Demo
+## What It Does
 
-_[Deployment URL — added after Day 2 deploy]_
-
----
-
-## Data
-
-- **Source**: ASER Rural reports 2018, 2019, 2021, 2022, 2023 from [asercentre.org](https://asercentre.org)
-- **State-level data**: Real percentages for Grade 3 and Grade 5 reading/math
-- **School-level data**: Simulated from state distributions (see `submission/data_note.md`)
-- **Focus states**: Bihar, Uttar Pradesh, Rajasthan, Madhya Pradesh, Kerala, Himachal Pradesh, Mizoram, Nagaland
-
-ASER data updates every 2 years, which is too slow for weekly decisions. NIPUN Compass closes this gap by generating its own leading indicators: monthly block-level micro-tests input by BEOs, principal feedback every 3 months on logged interventions, and trajectory forecasts that update as new tests arrive. ASER becomes the ground-truth audit; our own data becomes the steering wheel.
+| # | Feature | What the DEO gets |
+|---|---|---|
+| 1 | **Priority Queue** | Ranked list of the 20 highest-priority schools — one-line reason per school, copy-to-WhatsApp in 30 seconds |
+| 2 | **School Diagnosis** | Click any school: auto-generated paragraph + heatmap + 3-year trajectory forecast |
+| 3 | **Intervention Recommender** | 3 evidence-backed programs matched to the diagnosis, with cost, duration, and evidence source |
+| 4 | **Intervention Tracker** | Log before/after micro-test scores; see which camps actually moved the needle |
+| 5 | **Monthly Review Builder** | One-click district summary — export to PDF for the District Magistrate meeting |
 
 ---
 
-## Tech Stack
+## Screenshots
 
-| Layer | Choice |
-|---|---|
-| Language | Python 3.11 |
-| UI | Streamlit 1.32+ |
-| Charts | Plotly |
-| Data | pandas, numpy |
-| ML | scikit-learn |
-| Embeddings | sentence-transformers (all-MiniLM-L6-v2) |
-| Vector store | chromadb (local, persistent) |
-| Database | SQLite |
-| PDF export | reportlab |
-| PDF extraction | pdfplumber (primary), camelot-py (fallback) |
+> **[SCREENSHOT 1 — ADD HERE]** Priority Queue: ranked school cards with urgency color-coding and score breakdown
+>
+> *Your top 20 schools this week, ranked by a transparent 4-factor score. Adjust weights in the sidebar.*
+
+---
+
+> **[SCREENSHOT 2 — ADD HERE]** School Diagnosis: trend charts + auto-generated paragraph + forecast
+>
+> *Click any school: see exactly which grade, which subject, how many years it has been declining.*
+
+---
+
+> **[SCREENSHOT 3 — ADD HERE]** Intervention Recommender: RAG results with cost + evidence
+>
+> *3 evidence-backed interventions sourced from NIPUN Bharat, NCERT FLN, and Pratham's TaRL framework.*
+
+---
+
+## How It Works
+
+| Layer | Choice | Why |
+|---|---|---|
+| UI | Streamlit 1.32+ | Runs on office laptop, no install, DEO-appropriate |
+| Charts | Plotly | Interactive, hover-to-inspect |
+| Priority scoring | Weighted rule-based formula | Transparent — DEO can see and adjust every weight |
+| Intervention search | sentence-transformers + ChromaDB (local) | Offline, zero API keys, instant |
+| Tracker | SQLite | Persists across sessions without a server |
+| PDF export | reportlab | Clean, print-ready monthly review |
+| Data | ASER 2018–2022 (real) + simulated school layer | Documented in `submission/data_note.md` |
+
+**On data recency:** ASER updates every 2 years — too slow for weekly decisions. NIPUN Compass closes this gap with monthly block-level micro-tests from BEOs, trajectory forecasts, and principal feedback every 3 months. ASER becomes the ground-truth audit; BEO-submitted data becomes the steering wheel.
+
+[**Live Demo →**](https://YOUR_DEPLOY_URL_HERE)
 
 ---
 
 ## Run Locally
 
 ```bash
-git clone <repo>
+git clone https://github.com/RedAntDroid/nipun-compass
 cd nipun-compass
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-
-# Build the data pipeline (first time)
-python extraction/run_pipeline.py
-
-# Launch the app
 streamlit run app/main.py
 ```
 
----
-
-## Project Structure
-
-```
-nipun-compass/
-├── data/
-│   ├── raw/              # Original ASER PDFs
-│   ├── processed/        # aser_long.csv, schools_simulated.csv
-│   └── interventions/    # RAG corpus — 10 markdown files
-├── extraction/           # PDF → CSV pipeline
-├── app/
-│   ├── main.py           # Streamlit entrypoint
-│   ├── pages/            # 5 feature pages
-│   ├── components/       # Reusable UI components
-│   └── services/         # Data loading, scoring, RAG, forecasting
-├── db/                   # SQLite (created at runtime)
-├── submission/           # data_note.md, loom_url.txt
-└── notebooks/            # Dharun's personal insights exploration
-```
+[**Live Demo →**](https://YOUR_DEPLOY_URL_HERE) — no install needed.
 
 ---
 
-Built by **Dharun Kumar** · Kalvium Coimbatore · April 2026
-Flexera Product Engineering Challenge — Round 1 Submission
+*Built by Dharun Kumar · Kalvium Coimbatore · April 2026*
+*Flexera Product Engineering Challenge — Round 1*
