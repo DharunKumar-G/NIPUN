@@ -10,18 +10,18 @@ import pandas as pd
 import numpy as np
 
 # Section 8.3 palette
-NAV   = "#0F3057"
-SAF   = "#E76F24"
-CRIM  = "#C2362F"
-GRN   = "#4A7C59"
+NAV   = "#0F4C5C"   # deep teal
+SAF   = "#F59E0B"   # amber gold
+CRIM  = "#DC2626"   # red
+GRN   = "#16A34A"   # green
 GREY  = "#94A3B8"
-BGND  = "#F8F5F0"
+BGND  = "#F4F9F9"
 
 # Transparent fill variants for area charts
-NAV_FILL  = "rgba(15,48,87,0.07)"
-SAF_FILL  = "rgba(231,111,36,0.08)"
-CRIM_FILL = "rgba(194,54,47,0.07)"
-GRN_FILL  = "rgba(74,124,89,0.08)"
+NAV_FILL  = "rgba(15,76,92,0.07)"
+SAF_FILL  = "rgba(245,158,11,0.08)"
+CRIM_FILL = "rgba(220,38,38,0.07)"
+GRN_FILL  = "rgba(22,163,74,0.08)"
 
 
 def _hex_fill(hex_color: str, alpha: float = 0.07) -> str:
