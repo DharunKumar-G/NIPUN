@@ -111,7 +111,9 @@ def normalize_state(s: str) -> str:
     return STATE_CANON.get(s.lower().strip(), s.strip())
 
 
-def normalize_level(s: str) -> str:
+def normalize_level(s) -> str:
+    if not isinstance(s, str):
+        return "unknown"
     return LEVEL_NORM.get(s.lower().strip(), s.lower().strip())
 
 
@@ -119,7 +121,14 @@ def load_raw() -> pd.DataFrame:
     """Load all intermediate CSVs from data/raw/extracted/."""
     frames = []
     for csv in sorted(EXTRACTED_DIR.glob("*_raw.csv")):
-        df = pd.read_csv(csv)
+        if csv.stat().st_size < 10:
+            continue
+        try:
+            df = pd.read_csv(csv)
+        except Exception:
+            continue
+        if df.empty or len(df.columns) == 0:
+            continue
         frames.append(df)
     if not frames:
         raise FileNotFoundError(
@@ -149,17 +158,15 @@ def reshape(df_raw: pd.DataFrame) -> pd.DataFrame:
     df = df[df["state"] != "nan"]
     df = df[df["state"].str.len() > 1]
 
-    # 4. Drop grade=-1 rows (couldn't determine grade during extraction)
-    #    Keep them IF the year is 2019 (Early Years, Grade 1-3 only)
-    df_known_grade = df[df["grade"].isin([3, 5])]
-    df_unknown_grade = df[df["grade"] == -1]
-    if not df_unknown_grade.empty:
-        # Best-effort: assign grade 3 for 2019 Early Years (all Grade 1-3 report)
-        mask_2019 = df_unknown_grade["year"] == 2019
-        df_unknown_grade = df_unknown_grade.copy()
-        df_unknown_grade.loc[mask_2019, "grade"] = 3
-        df_unknown_grade = df_unknown_grade[df_unknown_grade["grade"].isin([3, 5])]
-    df = pd.concat([df_known_grade, df_unknown_grade], ignore_index=True)
+    # 4. Keep only grades 3 and 5 (NIPUN Bharat target grades).
+    #    grade -1 = unknown; assign grade 3 for 2019 Early Years.
+    #    grade 8 = ASER 2023 Beyond Basics; excluded from main dataset.
+    df_g35 = df[df["grade"].isin([3, 5])]
+    df_unk = df[df["grade"] == -1].copy()
+    if not df_unk.empty:
+        df_unk.loc[df_unk["year"] == 2019, "grade"] = 3
+        df_unk = df_unk[df_unk["grade"].isin([3, 5])]
+    df = pd.concat([df_g35, df_unk], ignore_index=True)
 
     # 5. Add district column (= state for state-level PDFs)
     if "district" not in df.columns:
@@ -227,7 +234,7 @@ def build_states_csv(df: pd.DataFrame) -> pd.DataFrame:
         "Punjab": "North",
         "Haryana": "North",
     }
-    states = df["state"].unique().tolist()
+    states = df["state"].unique().tolist() if not df.empty else []
     rows = []
     for s in states:
         if s == "All India":
@@ -238,6 +245,8 @@ def build_states_csv(df: pd.DataFrame) -> pd.DataFrame:
             "quartile": performance_quartile.get(s, "unknown"),
             "focus": s in FOCUS_STATES,
         })
+    if not rows:
+        return pd.DataFrame(columns=["state", "region", "quartile", "focus"])
     return pd.DataFrame(rows).sort_values("state").reset_index(drop=True)
 
 

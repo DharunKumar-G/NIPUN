@@ -1,0 +1,29 @@
+state,region,quartile,focus
+Andhra Pradesh,South,middle,False
+Arunachal Pradesh,Other,unknown,False
+Assam,Northeast,middle,False
+Bihar,Hindi Belt,bottom,True
+Chhattisgarh,Other,unknown,False
+Gujarat,West,middle,False
+Haryana,North,middle,False
+Himachal Pradesh,North,top,True
+Jammu and Kashmir,Other,unknown,False
+Jharkhand,Hindi Belt,bottom,False
+Karnataka,South,middle,False
+Kerala,South,top,True
+Madhya Pradesh,Hindi Belt,bottom,True
+Maharashtra,West,middle,False
+Manipur,Other,unknown,False
+Meghalaya,Other,unknown,False
+Mizoram,Northeast,top,True
+Nagaland,Northeast,middle,True
+Odisha,East,middle,False
+Punjab,North,middle,False
+Rajasthan,Hindi Belt,bottom,True
+Sikkim,Other,unknown,False
+Tamil Nadu,South,top,False
+Telangana,South,middle,False
+Tripura,Other,unknown,False
+Uttar Pradesh,Hindi Belt,bottom,True
+Uttarakhand,Other,unknown,False
+West Bengal,East,middle,False
