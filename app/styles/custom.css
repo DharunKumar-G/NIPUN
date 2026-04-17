@@ -1,120 +1,212 @@
-/* NIPUN Compass — Section 8.3 color + typography rules */
+/* NIPUN Compass — Section 8.3 design system */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 html, body, [class*="css"] {
     font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
 }
 
-/* ── Background ────────────────────────────────────────────── */
+/* ── Background ─────────────────────────────────────────── */
 .stApp { background-color: #F8F5F0; }
+.block-container { padding-top: 1.5rem !important; }
 
-/* ── Primary button (navy) ─────────────────────────────────── */
+/* ── Fade-in animation ──────────────────────────────────── */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.nipun-card, .int-card, .tracker-card {
+    animation: fadeInUp 0.28s ease forwards;
+}
+
+/* ── Primary buttons (navy) ─────────────────────────────── */
 .stButton > button {
     background-color: #0F3057;
     color: #FFFFFF;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-weight: 600;
     font-size: 0.875rem;
-    padding: 0.45rem 1rem;
-    transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    padding: 0.5rem 1.1rem;
+    transition: background 0.2s ease, transform 0.12s ease, box-shadow 0.2s ease;
 }
 .stButton > button:hover {
     background-color: #1a4a7a;
     color: #FFFFFF;
     border: none;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(15,48,87,0.3);
+    box-shadow: 0 4px 14px rgba(15,48,87,0.28);
 }
-.stButton > button:active {
-    transform: translateY(0);
+.stButton > button:active { transform: translateY(0); }
+
+/* ── Download button (green) ────────────────────────────── */
+.stDownloadButton > button {
+    background-color: #4A7C59 !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    padding: 0.5rem 1.1rem !important;
+    transition: background 0.2s ease, box-shadow 0.2s ease !important;
+}
+.stDownloadButton > button:hover {
+    background-color: #3a6349 !important;
+    box-shadow: 0 4px 14px rgba(74,124,89,0.28) !important;
+    transform: translateY(-1px) !important;
 }
 
-/* ── Metric cards ──────────────────────────────────────────── */
+/* ── Metric cards ───────────────────────────────────────── */
 [data-testid="stMetric"] {
     background-color: #FFFFFF;
     border: 1px solid #EDEAE5;
-    border-radius: 8px;
-    padding: 0.9rem 1.1rem;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-    transition: box-shadow 0.2s ease;
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
 }
 [data-testid="stMetric"]:hover {
-    box-shadow: 0 4px 16px rgba(15,48,87,0.1);
+    box-shadow: 0 4px 18px rgba(15,48,87,0.09);
+    transform: translateY(-1px);
 }
-
-/* ── Metric label font ─────────────────────────────────────── */
 [data-testid="stMetricLabel"] {
-    font-size: 0.72rem !important;
+    font-size: 0.71rem !important;
     font-weight: 600 !important;
     color: #64748B !important;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
+}
+[data-testid="stMetricValue"] {
+    font-size: 1.65rem !important;
+    font-weight: 700 !important;
+    color: #0F3057 !important;
+}
+[data-testid="stMetricDelta"] {
+    font-size: 0.76rem !important;
+    font-weight: 600 !important;
 }
 
-/* ── Container borders ─────────────────────────────────────── */
-[data-testid="stContainer"] {
-    border-radius: 8px;
-}
-
-/* ── Sidebar ───────────────────────────────────────────────── */
+/* ── Sidebar ────────────────────────────────────────────── */
 [data-testid="stSidebar"] {
     background: linear-gradient(180deg, #0F3057 0%, #0a2240 100%);
 }
-[data-testid="stSidebar"] * {
-    color: #FFFFFF !important;
-}
-[data-testid="stSidebar"] .stSelectbox label,
-[data-testid="stSidebar"] .stSlider label,
-[data-testid="stSidebar"] h1,
-[data-testid="stSidebar"] h2,
-[data-testid="stSidebar"] h3 {
-    color: #FFFFFF !important;
-}
-[data-testid="stSidebar"] .stMarkdown p {
-    color: #CBD5E1 !important;
-}
+[data-testid="stSidebar"] * { color: #FFFFFF !important; }
+[data-testid="stSidebar"] .stMarkdown p { color: #CBD5E1 !important; }
 [data-testid="stSidebar"] .stSelectbox > div > div {
     background-color: rgba(255,255,255,0.12) !important;
     border: 1px solid rgba(255,255,255,0.2) !important;
     color: #FFFFFF !important;
-    border-radius: 6px;
+    border-radius: 8px;
+}
+[data-testid="stSidebar"] .stSlider .stSlider-thumb {
+    background: #E76F24 !important;
+}
+[data-testid="stSidebar"] hr {
+    border-color: rgba(255,255,255,0.15) !important;
+    margin: 1rem 0 !important;
 }
 
-/* ── Header accent bar ─────────────────────────────────────── */
+/* ── Tabs ───────────────────────────────────────────────── */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 0;
+    border-bottom: 2px solid #EDEAE5;
+    background: transparent;
+    padding: 0;
+}
+.stTabs [data-baseweb="tab"] {
+    padding: 0.6rem 1.3rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #64748B;
+    border-radius: 8px 8px 0 0;
+    border: none;
+    background: transparent;
+    transition: color 0.18s ease, background 0.18s ease;
+}
+.stTabs [aria-selected="true"] {
+    color: #0F3057 !important;
+    background: #FFFFFF !important;
+    border-bottom: 2px solid #0F3057 !important;
+}
+.stTabs [data-baseweb="tab"]:hover:not([aria-selected="true"]) {
+    color: #0F3057;
+    background: rgba(15,48,87,0.05);
+}
+.stTabs [data-baseweb="tab-panel"] { padding-top: 1.25rem; }
+
+/* ── Form inputs ────────────────────────────────────────── */
+.stTextInput input,
+.stNumberInput input,
+.stTextArea textarea,
+.stDateInput input {
+    border: 1.5px solid #E2E8F0 !important;
+    border-radius: 8px !important;
+    font-size: 0.9rem !important;
+    background: #FFFFFF !important;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease !important;
+}
+.stTextInput input:focus,
+.stNumberInput input:focus,
+.stTextArea textarea:focus {
+    border-color: #0F3057 !important;
+    box-shadow: 0 0 0 3px rgba(15,48,87,0.09) !important;
+    outline: none !important;
+}
+.stSelectbox > div > div {
+    border: 1.5px solid #E2E8F0 !important;
+    border-radius: 8px !important;
+    background: #FFFFFF !important;
+    transition: border-color 0.18s ease !important;
+}
+.stSelectbox > div > div:hover { border-color: #0F3057 !important; }
+
+/* ── Alert / info boxes ─────────────────────────────────── */
+[data-testid="stAlert"] {
+    border-radius: 10px !important;
+    border-left-width: 4px !important;
+}
+
+/* ── Expander header ────────────────────────────────────── */
+[data-testid="stExpander"] summary {
+    font-weight: 600;
+    color: #0F3057;
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    transition: background 0.15s;
+}
+[data-testid="stExpander"]:hover summary { background: rgba(15,48,87,0.04); }
+[data-testid="stExpander"] > details { border: 1px solid #EDEAE5 !important; border-radius: 10px !important; }
+
+/* ── Dataframe ──────────────────────────────────────────── */
+[data-testid="stDataFrame"] {
+    border-radius: 10px !important;
+    overflow: hidden;
+    border: 1px solid #EDEAE5 !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+/* ── Header accent bar ──────────────────────────────────── */
 .nipun-header {
     border-left: 4px solid #E76F24;
-    padding-left: 1.25rem;
+    padding: 0.3rem 0 0.3rem 1.25rem;
     margin-bottom: 1.25rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
 }
 
-/* ── Status badges ─────────────────────────────────────────── */
+/* ── Status badges ──────────────────────────────────────── */
 .badge-danger  { color: #C2362F; font-weight: 700; }
 .badge-warn    { color: #E76F24; font-weight: 600; }
 .badge-success { color: #4A7C59; font-weight: 600; }
 .badge-neutral { color: #64748B; font-weight: 500; }
 
-/* ── School rank number ────────────────────────────────────── */
-.rank-badge {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #0F3057;
-    min-width: 2.5rem;
-}
-
-/* ── NIPUN School Cards ────────────────────────────────────── */
+/* ── School priority cards ──────────────────────────────── */
 .nipun-card {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     transition: box-shadow 0.2s ease, transform 0.15s ease;
 }
 .nipun-card:hover {
-    box-shadow: 0 6px 24px rgba(0,0,0,0.13) !important;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.12) !important;
     transform: translateY(-2px);
 }
 
-/* ── Score progress bar ────────────────────────────────────── */
+/* ── Score progress bar ─────────────────────────────────── */
 .score-track {
     background: #E2E8F0;
     border-radius: 4px;
@@ -128,10 +220,10 @@ html, body, [class*="css"] {
     transition: width 0.5s ease;
 }
 
-/* ── Urgency pill badge ────────────────────────────────────── */
+/* ── Urgency pill badge ─────────────────────────────────── */
 .urgency-pill {
     display: inline-block;
-    font-size: 0.68rem;
+    font-size: 0.67rem;
     font-weight: 700;
     letter-spacing: 0.05em;
     padding: 2px 10px;
@@ -140,24 +232,83 @@ html, body, [class*="css"] {
     text-transform: uppercase;
 }
 
-/* ── Intervention cards ────────────────────────────────────── */
-.intervention-card {
+/* ── Intervention cards ─────────────────────────────────── */
+.int-card {
     background: #FFFFFF;
-    border: 1px solid #EDEAE5;
-    border-radius: 10px;
-    padding: 1.25rem;
-    margin-bottom: 1rem;
+    border: 1.5px solid #EDEAE5;
+    border-radius: 14px;
+    padding: 1.3rem 1.5rem 1rem;
+    margin-bottom: 0.5rem;
     transition: box-shadow 0.2s ease, transform 0.15s ease;
 }
-.intervention-card:hover {
+.int-card:hover {
     box-shadow: 0 8px 32px rgba(15,48,87,0.1);
     transform: translateY(-2px);
 }
 
-/* ── Compact block-container ───────────────────────────────── */
-.block-container { padding-top: 1.25rem !important; }
+/* ── Intervention meta pills ─────────────────────────────── */
+.meta-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    border-radius: 6px;
+    padding: 3px 10px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    margin-right: 0.4rem;
+}
+.pill-cost     { background: #EFF6FF; color: #1e4a87; }
+.pill-duration { background: #F0FDF4; color: #4A7C59; }
+.pill-grade    { background: #FFF7ED; color: #c25a10; }
+.match-badge {
+    display: inline-block;
+    background: #0F3057;
+    color: #FFFFFF;
+    border-radius: 20px;
+    padding: 3px 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
 
-/* ── WhatsApp copy area ────────────────────────────────────── */
+/* ── Tracker cards ──────────────────────────────────────── */
+.tracker-card {
+    background: #FFFFFF;
+    border: 1.5px solid #EDEAE5;
+    border-radius: 14px;
+    padding: 1.1rem 1.3rem 0.85rem;
+    margin-bottom: 0.5rem;
+    transition: box-shadow 0.2s ease;
+}
+.tracker-card:hover { box-shadow: 0 4px 20px rgba(15,48,87,0.09); }
+
+/* ── Days running progress bar ──────────────────────────── */
+.days-bar-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.6rem;
+}
+.days-bar-track {
+    flex: 1;
+    background: #E2E8F0;
+    border-radius: 4px;
+    height: 6px;
+    overflow: hidden;
+}
+.days-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+.days-label {
+    font-size: 0.76rem;
+    font-weight: 700;
+    min-width: 90px;
+    text-align: right;
+}
+
+/* ── WhatsApp copy area ─────────────────────────────────── */
 .whatsapp-block {
     background-color: #DCF8C6;
     border-radius: 8px;
@@ -168,25 +319,7 @@ html, body, [class*="css"] {
     border: 1px solid #B0D9A0;
 }
 
-/* ── Expander header ───────────────────────────────────────── */
-[data-testid="stExpander"] summary {
-    font-weight: 600;
-    color: #0F3057;
-}
-[data-testid="stExpander"]:hover summary {
-    color: #1a4a7a;
-}
-
-/* ── Info box ──────────────────────────────────────────────── */
-[data-testid="stAlert"] {
-    border-radius: 8px;
-    border-left-width: 4px;
-}
-
-/* ── Divider ───────────────────────────────────────────────── */
-hr { border-color: #EDEAE5 !important; margin: 1.25rem 0 !important; }
-
-/* ── Scatter plot wrapper ──────────────────────────────────── */
+/* ── Scatter plot wrapper ───────────────────────────────── */
 .scatter-callout {
     background: #FFFFFF;
     border-radius: 10px;
@@ -195,13 +328,8 @@ hr { border-color: #EDEAE5 !important; margin: 1.25rem 0 !important; }
     margin-bottom: 1rem;
 }
 
-/* ── KPI number pop ────────────────────────────────────────── */
-[data-testid="stMetricValue"] {
-    font-size: 1.6rem !important;
-    font-weight: 700 !important;
-    color: #0F3057 !important;
-}
-[data-testid="stMetricDelta"] {
-    font-size: 0.78rem !important;
-    font-weight: 600 !important;
-}
+/* ── Divider ────────────────────────────────────────────── */
+hr { border-color: #EDEAE5 !important; margin: 1.25rem 0 !important; }
+
+/* ── Spinner ────────────────────────────────────────────── */
+.stSpinner > div { border-top-color: #E76F24 !important; }

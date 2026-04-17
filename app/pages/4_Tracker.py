@@ -74,7 +74,7 @@ def _load_all() -> pd.DataFrame:
     return df
 
 
-# ── Sidebar — district selector ───────────────────────────────────────────────
+# ── Sidebar ───────────────────────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("## District")
     states = get_states()
@@ -104,7 +104,7 @@ tab_log, tab_active, tab_completed = st.tabs([
 
 # ── Tab 1: Log ────────────────────────────────────────────────────────────────
 with tab_log:
-    st.subheader("Start a new intervention")
+    st.markdown("#### Start a new intervention")
 
     school_list = get_school_list(form_state, form_district)
     school_names = school_list["school_name"].tolist()
@@ -165,39 +165,95 @@ with tab_active:
     if df_active.empty:
         st.info("No active interventions. Log one in the first tab.")
     else:
-        st.metric("Running now", len(df_active))
+        k1, k2, _ = st.columns([1, 1, 4])
+        k1.metric("Running now", len(df_active))
+        overdue = (df_active["start_date"].apply(
+            lambda d: (date.today() - datetime.strptime(d, "%Y-%m-%d").date()).days
+            if d else 0
+        ) >= 168).sum()
+        if overdue:
+            k2.metric("6-month reviews overdue", overdue)
+
+        st.markdown("<div style='height:0.5rem'></div>", unsafe_allow_html=True)
+
         today = date.today()
-        df_active["days_running"] = df_active["start_date"].apply(
-            lambda d: (today - datetime.strptime(d, "%Y-%m-%d").date()).days if d else 0
-        )
-
         for _, row in df_active.iterrows():
-            with st.container(border=True):
-                col_info, col_btn = st.columns([5, 1])
-                days = int(row.get("days_running", 0))
-                alert = ""
-                if days >= 168:
-                    alert = "  🔴 **6-month review overdue — ask the principal now**"
-                elif days >= 84:
-                    alert = "  🟡 3-month check due soon"
+            days = (today - datetime.strptime(row["start_date"], "%Y-%m-%d").date()).days \
+                   if row["start_date"] else 0
 
-                with col_info:
-                    st.markdown(
-                        f"**{row['school_name']}** · {row['intervention']}  \n"
-                        f"Started {row['start_date']} · **{days} days running** · "
-                        f"Baseline: {row['baseline_score']:.0f}% ({row['target_subject']})"
-                        f"{alert}"
-                    )
-                with col_btn:
-                    if st.button("Principal reported back", key=f"upd_{row['id']}"):
-                        st.session_state["upd_id"]       = int(row["id"])
-                        st.session_state["upd_name"]     = row["school_name"]
-                        st.session_state["upd_baseline"] = float(row["baseline_score"])
+            progress_pct = min(100, int(days / 180 * 100))
+
+            if days >= 168:
+                bar_color  = "#C2362F"
+                days_label = f"{days} days — review overdue"
+                alert_html = """
+                  <div style="
+                    background:#FEF2F2;border-radius:6px;padding:0.45rem 0.75rem;
+                    margin-top:0.55rem;border-left:3px solid #C2362F;
+                    font-size:0.8rem;font-weight:600;color:#C2362F
+                  ">
+                    6-month review overdue — ask the principal for a score update now
+                  </div>"""
+            elif days >= 84:
+                bar_color  = "#E76F24"
+                days_label = f"{days} days — 3-month check due"
+                alert_html = """
+                  <div style="
+                    background:#FFF7ED;border-radius:6px;padding:0.45rem 0.75rem;
+                    margin-top:0.55rem;border-left:3px solid #E76F24;
+                    font-size:0.8rem;font-weight:600;color:#c25a10
+                  ">
+                    3-month check due — schedule a micro-test this week
+                  </div>"""
+            else:
+                bar_color  = "#4A7C59"
+                days_label = f"{days} days running"
+                alert_html = ""
+
+            st.markdown(f"""
+<div class="tracker-card">
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:0.75rem;margin-bottom:0.35rem">
+    <div style="flex:1;min-width:0">
+      <div style="font-size:1rem;font-weight:700;color:#0F3057;margin-bottom:2px">
+        {row['school_name']}
+      </div>
+      <div style="font-size:0.84rem;color:#475569;font-weight:500">
+        {row['intervention']}
+      </div>
+    </div>
+    <div style="
+      background:#F1F5F9;border-radius:6px;padding:3px 10px;
+      font-size:0.72rem;font-weight:700;color:#64748B;white-space:nowrap;flex-shrink:0
+    ">
+      {row['target_subject'].upper()}
+    </div>
+  </div>
+
+  <div style="font-size:0.78rem;color:#94A3B8;margin-bottom:0.4rem">
+    Started {row['start_date']} &nbsp;·&nbsp;
+    Baseline: <strong style="color:#475569">{row['baseline_score']:.0f}%</strong>
+  </div>
+
+  <div class="days-bar-wrap">
+    <div class="days-bar-track">
+      <div class="days-bar-fill" style="width:{progress_pct}%;background:{bar_color}"></div>
+    </div>
+    <span class="days-label" style="color:{bar_color}">{days_label}</span>
+  </div>
+
+  {alert_html}
+</div>
+""", unsafe_allow_html=True)
+
+            if st.button("Principal reported back →", key=f"upd_{row['id']}"):
+                st.session_state["upd_id"]       = int(row["id"])
+                st.session_state["upd_name"]     = row["school_name"]
+                st.session_state["upd_baseline"] = float(row["baseline_score"])
 
         # Update form
         if "upd_id" in st.session_state:
             st.divider()
-            st.subheader(f"Record update: {st.session_state['upd_name']}")
+            st.markdown(f"#### Record update: {st.session_state['upd_name']}")
             with st.form("update_form"):
                 followup = st.number_input(
                     "New score — % of students at target level now",
@@ -210,7 +266,7 @@ with tab_active:
                 save_update = st.form_submit_button("Save update", type="primary")
 
             if save_update:
-                delta     = followup - st.session_state["upd_baseline"]
+                delta      = followup - st.session_state["upd_baseline"]
                 new_status = "completed" if mark_done else "active"
                 conn = _conn()
                 conn.execute(
@@ -225,7 +281,7 @@ with tab_active:
                 conn.close()
                 del st.session_state["upd_id"]
                 st.success(
-                    f"Updated! Score change: {delta:+.1f} percentage points. "
+                    f"Saved. Score change: **{delta:+.1f} pp**. "
                     + ("Marked as completed." if mark_done else "Still active.")
                 )
                 st.rerun()
@@ -243,19 +299,27 @@ with tab_completed:
         )
     else:
         avg_delta = df_done["score_delta"].mean()
-        c1, c2 = st.columns(2)
-        c1.metric("Interventions completed", len(df_done))
-        c2.metric(
-            "Average score gain across all schools",
+        positive  = (df_done["score_delta"] > 0).sum() if not df_done.empty else 0
+
+        k1, k2, k3 = st.columns(3)
+        k1.metric("Interventions completed", len(df_done))
+        k2.metric(
+            "Average score gain",
             f"{avg_delta:+.1f} pp" if not pd.isna(avg_delta) else "—",
         )
+        k3.metric("Showing improvement", f"{positive} / {len(df_done)}")
+
+        st.markdown("<div style='height:0.5rem'></div>", unsafe_allow_html=True)
 
         for _, row in df_done.iterrows():
-            delta_str = (
-                f"{row['score_delta']:+.1f} pp"
-                if not pd.isna(row.get("score_delta")) else "no data"
-            )
-            with st.expander(f"{row['school_name']} — {row['intervention']} ({delta_str})"):
+            delta_val = row.get("score_delta")
+            delta_str = f"{delta_val:+.1f} pp" if not pd.isna(delta_val) else "no data"
+            delta_color = "#4A7C59" if (not pd.isna(delta_val) and delta_val > 0) else "#C2362F"
+
+            with st.expander(
+                f"{row['school_name']} — {row['intervention']}  ·  {delta_str}",
+                expanded=False,
+            ):
                 fig = bar_before_after(
                     school_name=row["school_name"],
                     baseline_reading=(
@@ -279,6 +343,8 @@ with tab_completed:
                 )
                 st.plotly_chart(fig, use_container_width=True)
                 if row.get("principal_notes"):
-                    st.caption(f"Principal: \"{row['principal_notes']}\"")
+                    st.markdown(
+                        f"> *Principal: \"{row['principal_notes']}\"*"
+                    )
 
 render_footer()
