@@ -1,9 +1,90 @@
-/* NIPUN Compass — custom styles */
-/* Colors per Section 8.3 */
-:root {
-    --primary:   #0F3057;  /* deep navy */
-    --accent:    #E76F24;  /* saffron-adjacent */
-    --danger:    #C2362F;  /* crimson */
-    --success:   #4A7C59;  /* olive green */
-    --neutral:   #F8F5F0;  /* warm off-white background */
+/* NIPUN Compass — Section 8.3 color + typography rules */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+}
+
+/* ── Background ────────────────────────────────────────────── */
+.stApp { background-color: #F8F5F0; }
+
+/* ── Primary button (navy) ─────────────────────────────────── */
+.stButton > button {
+    background-color: #0F3057;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+.stButton > button:hover {
+    background-color: #1a4a7a;
+    color: #FFFFFF;
+    border: none;
+}
+
+/* ── Metric cards ──────────────────────────────────────────── */
+[data-testid="stMetric"] {
+    background-color: #FFFFFF;
+    border: 1px solid #EDEAE5;
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+}
+
+/* ── Priority card borders ─────────────────────────────────── */
+[data-testid="stContainer"] {
+    border-radius: 6px;
+}
+
+/* ── Sidebar ───────────────────────────────────────────────── */
+[data-testid="stSidebar"] {
+    background-color: #0F3057;
+}
+[data-testid="stSidebar"] * {
+    color: #FFFFFF !important;
+}
+[data-testid="stSidebar"] .stSelectbox label,
+[data-testid="stSidebar"] .stSlider label,
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+    color: #FFFFFF !important;
+}
+[data-testid="stSidebar"] .stMarkdown p {
+    color: #CBD5E1 !important;
+}
+
+/* ── Header accent bar ─────────────────────────────────────── */
+.nipun-header {
+    border-left: 4px solid #E76F24;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* ── Status badges ─────────────────────────────────────────── */
+.badge-danger  { color: #C2362F; font-weight: 700; }
+.badge-warn    { color: #E76F24; font-weight: 600; }
+.badge-success { color: #4A7C59; font-weight: 600; }
+.badge-neutral { color: #64748B; font-weight: 500; }
+
+/* ── School rank number ────────────────────────────────────── */
+.rank-badge {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0F3057;
+    min-width: 2.5rem;
+}
+
+/* ── Compact block-container ───────────────────────────────── */
+.block-container { padding-top: 1.25rem !important; }
+
+/* ── WhatsApp copy area ────────────────────────────────────── */
+.whatsapp-block {
+    background-color: #DCF8C6;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-family: monospace;
+    font-size: 0.8rem;
+    white-space: pre-wrap;
+    border: 1px solid #B0D9A0;
 }
