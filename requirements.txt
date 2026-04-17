@@ -1,12 +1,16 @@
-streamlit>=1.32.0
-pandas>=2.2.0
-numpy>=1.26.0
-plotly>=5.19.0
-scikit-learn>=1.4.0
-pdfplumber>=0.11.0
-camelot-py[cv]>=0.11.0
-sentence-transformers>=2.5.0
-chromadb>=0.4.24
-reportlab>=4.1.0
-python-dotenv>=1.0.0
-openpyxl>=3.1.0
+# NIPUN Compass — Streamlit app runtime dependencies
+# Pinned exact versions (tested 2026-04-17, Python 3.11+)
+# Extraction pipeline deps (pdfplumber, camelot-py) are NOT listed here —
+# they are only needed for the one-time data build step and require system
+# packages (poppler, ghostscript) that are unavailable on Streamlit Cloud.
+
+streamlit==1.56.0
+pandas==3.0.2
+numpy==2.4.4
+plotly==6.7.0
+scikit-learn==1.8.0
+sentence-transformers==5.4.1
+chromadb==1.5.8
+reportlab==4.4.10
+python-dotenv==1.2.2
+openpyxl==3.1.5

@@ -1,14 +1,15 @@
+# NIPUN Compass — Streamlit theme (Section 8.3 color palette)
 [theme]
-primaryColor = "#0F3057"        # Deep navy — govt-appropriate
-backgroundColor = "#F8F5F0"     # Warm off-white
+primaryColor          = "#0F3057"   # Deep navy — govt-appropriate, not startup-y
+backgroundColor       = "#F8F5F0"   # Warm off-white — neutral
 secondaryBackgroundColor = "#EDEAE5"
-textColor = "#1A1A1A"
-font = "sans serif"
+textColor             = "#1A1A1A"
+font                  = "sans serif"  # Inter via CSS; falls back to system sans-serif
 
 [browser]
 gatherUsageStats = false
 
 [server]
-headless = true
-enableCORS = false
+headless           = true
+enableCORS         = false
 enableXsrfProtection = true

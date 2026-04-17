@@ -1,3 +1,11 @@
+from __future__ import annotations
+import sys
+from pathlib import Path
+
+_root = str(Path(__file__).resolve().parent.parent.parent)
+if _root not in sys.path:
+    sys.path.insert(0, _root)
+
 """
 Transparent rule-based priority score — NOT "AI ranks schools".
 
@@ -9,8 +17,6 @@ priority_score = 0.35 × reading_gap_vs_district_avg
 Weights are configurable per acceptance criteria (DEO-editable sliders in UI).
 All inputs normalized 0–1 before weighting so the score is always 0–1.
 """
-from __future__ import annotations
-from pathlib import Path
 import sqlite3
 import pandas as pd
 import numpy as np

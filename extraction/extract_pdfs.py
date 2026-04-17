@@ -239,6 +239,80 @@ def extract_aser_2022(pdf_path: Path) -> pd.DataFrame:
                             }
                         )
 
+        # ── Part 3: Per-state Std III/V full level breakdown ──────────────
+        # Tables like: Std | Not even letter | Letter | Word | Std I text | Std II text | Total
+        # And:         Std | Not even 1-9 | Recognise 1-9 | Subtract | Divide | Total
+        READING_LEVEL_MAP = {
+            "not even": "nothing", "not even\nletter": "nothing",
+            "letter": "letter", "word": "word", "word\nl": "word",
+            "std i": "paragraph", "std i\nlevel text": "paragraph",
+            "std ii": "story", "std ii\nlevel text": "story",
+        }
+        MATH_LEVEL_MAP = {
+            "not even\n1-9": "nothing", "not even": "nothing",
+            "recognise": "recognition", "recognise number": "recognition",
+            "recognise number\n1-9 11-99": "recognition",
+            "subtract": "subtraction", "divide": "division",
+        }
+        STD_TO_GRADE = {"iii": 3, "3": 3, "v": 5, "5": 5}
+        current_state = None
+        for i, page in enumerate(pdf.pages):
+            text = page.extract_text() or ""
+            lines = text.split("\n")
+            if lines:
+                m = re.match(r"^([A-Za-z &\-\.]+?)\s+202[0-9]\s+RURAL", lines[0])
+                if m:
+                    candidate = m.group(1).strip()
+                    if len(candidate) > 2:
+                        current_state = normalize_state(candidate)
+            if not current_state:
+                continue
+            for table in (page.extract_tables() or []):
+                if not table or len(table) < 3:
+                    continue
+                flat = re.sub(r"\s+", " ",
+                    " ".join(str(c) for row in table[:2] for c in (row or []) if c)
+                ).lower()
+                is_read_lvl = "letter" in flat and "word" in flat
+                is_math_lvl = "recognise" in flat or ("subtract" in flat and "divide" in flat)
+                if not (is_read_lvl or is_math_lvl):
+                    continue
+                # Parse column headers from row 0
+                headers = [re.sub(r"\s+", " ", str(c).strip()).lower() if c else ""
+                           for c in (table[0] or [])]
+                # Map col index → level name
+                col_level: dict[int, str] = {}
+                lvl_map = READING_LEVEL_MAP if is_read_lvl else MATH_LEVEL_MAP
+                for ci, h in enumerate(headers):
+                    for key, lvl in lvl_map.items():
+                        if key in h:
+                            col_level[ci] = lvl
+                            break
+                if not col_level:
+                    continue
+                # Data rows: first col = Std (I, II, III, V, etc.)
+                for row in table[1:]:
+                    if not row or not row[0]:
+                        continue
+                    std_raw = str(row[0]).strip().lower().replace("std", "").strip()
+                    grade = STD_TO_GRADE.get(std_raw)
+                    if grade not in (3, 5):
+                        continue
+                    for ci, lvl in col_level.items():
+                        if ci >= len(row) or not row[ci]:
+                            continue
+                        cell = str(row[ci]).strip()
+                        if looks_like_pct(cell):
+                            records.append({
+                                "year": 2022,
+                                "state": current_state,
+                                "subject": "reading" if is_read_lvl else "math",
+                                "level": lvl,
+                                "grade": grade,
+                                "percentage": float(cell.replace("%", "")),
+                                "page": i + 1,
+                            })
+
     df = pd.DataFrame(records).drop_duplicates(
         subset=["year", "state", "grade", "subject", "level"]
     )
@@ -416,7 +490,81 @@ def extract_aser_2023(pdf_path: Path) -> pd.DataFrame:
     return df
 
 
-# ── Generic extractor (2019, 2021 fallback) ──────────────────────────────────
+# ── ASER 2021 (Phone Survey) ─────────────────────────────────────────────────
+# Limited learning-level data; extracts Std III reading at national level
+# from the per-year trend tables visible in the report.
+
+def extract_aser_2021(pdf_path: Path) -> pd.DataFrame:
+    print(f"  [targeted-2021] {pdf_path.name}")
+    records = []
+    # Table on p18: % children at beginner level / can read Std I text (Std I/II/III)
+    # Table on p38-40: Std III-V enrollment/reading with 2020 and 2021 columns
+    READING_KW = re.compile(r"(read|letter|word|Std I level|Std II level)", re.I)
+    MATH_KW = re.compile(r"(subtraction|division|subtract|divide|arithmetic)", re.I)
+
+    with pdfplumber.open(str(pdf_path)) as pdf:
+        for i, page in enumerate(pdf.pages):
+            for table in (page.extract_tables() or []):
+                if not table or len(table) < 3:
+                    continue
+                flat = re.sub(r"\s+", " ",
+                    " ".join(str(c) for row in table[:4] for c in (row or []) if c))
+                if "2021" not in flat:
+                    continue
+                is_read = bool(READING_KW.search(flat))
+                is_math = bool(MATH_KW.search(flat))
+                if not (is_read or is_math):
+                    continue
+                subj = "reading" if is_read else "math"
+                lvl = "story" if is_read else "subtraction"
+                # Find 2021 column
+                col_2021 = None
+                for ri in range(min(3, len(table))):
+                    cells = [str(c).strip() if c else "" for c in (table[ri] or [])]
+                    if "2021" in cells:
+                        col_2021 = cells.index("2021")
+                        break
+                if col_2021 is None:
+                    continue
+                # Look for "Std III" or "Std III-V" in first column
+                for row in table:
+                    if not row or not row[0]:
+                        continue
+                    r0 = str(row[0]).strip()
+                    grade_hint = None
+                    if "III" in r0 and "V" not in r0.replace("III", ""):
+                        grade_hint = 3
+                    elif "V" in r0 and "III" not in r0:
+                        grade_hint = 5
+                    if grade_hint is None:
+                        continue
+                    if col_2021 < len(row) and row[col_2021] and looks_like_pct(str(row[col_2021])):
+                        records.append({
+                            "year": 2021,
+                            "state": "All India",
+                            "subject": subj,
+                            "level": lvl,
+                            "grade": grade_hint,
+                            "percentage": float(str(row[col_2021]).replace("%", "").strip()),
+                            "page": i + 1,
+                        })
+    df = pd.DataFrame(records).drop_duplicates(
+        subset=["year", "state", "grade", "subject", "level"])
+    print(f"  → {len(df)} rows from ASER 2021")
+    return df
+
+
+# ── ASER 2019 (Early Years) ───────────────────────────────────────────────────
+# Covers 26 specific districts only (not state-level summary for Std III/V).
+# Not compatible with our state-level Grade 3/5 schema — skip gracefully.
+
+def extract_aser_2019(pdf_path: Path) -> pd.DataFrame:
+    print(f"  [skip-2019] Early Years report covers specific districts only; "
+          f"not compatible with Grade 3/5 state schema.")
+    return pd.DataFrame()
+
+
+# ── Generic extractor (fallback) ─────────────────────────────────────────────
 
 def extract_generic(pdf_path: Path, year: int) -> pd.DataFrame:
     """
@@ -475,6 +623,10 @@ def extract_year(pdf_path: Path, year: int) -> pd.DataFrame:
         return extract_aser_2022(pdf_path)
     elif year == 2018:
         return extract_aser_2018(pdf_path)
+    elif year == 2021:
+        return extract_aser_2021(pdf_path)
+    elif year == 2019:
+        return extract_aser_2019(pdf_path)
     elif year == 2023:
         return extract_aser_2023(pdf_path)
     else:
