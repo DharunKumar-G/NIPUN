@@ -24,26 +24,6 @@ District Education Officers in low-performing states receive ASER reports every 
 
 ---
 
-## Screenshots
-
-> **[SCREENSHOT 1 — ADD HERE]** Priority Queue: ranked school cards with urgency color-coding and score breakdown
->
-> *Your top 20 schools this week, ranked by a transparent 4-factor score. Adjust weights in the sidebar.*
-
----
-
-> **[SCREENSHOT 2 — ADD HERE]** School Diagnosis: trend charts + auto-generated paragraph + forecast
->
-> *Click any school: see exactly which grade, which subject, how many years it has been declining.*
-
----
-
-> **[SCREENSHOT 3 — ADD HERE]** Intervention Recommender: RAG results with cost + evidence
->
-> *3 evidence-backed interventions sourced from NIPUN Bharat, NCERT FLN, and Pratham's TaRL framework.*
-
----
-
 ## How It Works
 
 | Layer | Choice | Why |
@@ -74,3 +54,8 @@ streamlit run app/main.py
 
 [**Live Demo →**](https://YOUR_DEPLOY_URL_HERE) — no install needed.
 
+---
+
+## Contributors
+
+- **Dharun Kumar** — product design, data pipeline, Streamlit app, ASER dataset, Power BI insights
