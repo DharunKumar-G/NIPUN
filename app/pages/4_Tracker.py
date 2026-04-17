@@ -9,8 +9,8 @@ Feature 4 — Intervention Tracker (Accountability Loop)
 DEO question: Did the last camp actually work?
 
 State stored in SQLite (db/interventions.db) — persists across page refreshes.
-"Mark as updated" simulates principal submission (for demo; real product
-would have a separate principal login).
+"Mark as updated" records principal submission — a separate principal login
+would be added in a future release.
 """
 import sqlite3
 from datetime import date, datetime

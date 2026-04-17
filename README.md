@@ -2,7 +2,7 @@
 
 **The Monday-morning tool for District Education Officers.**
 
-[**Live Demo →**](https://YOUR_DEPLOY_URL_HERE)
+[**Live App →**](https://dharunkumar-g-nipun-appmain-6i5wwu.streamlit.app/)
 
 ---
 
@@ -38,7 +38,7 @@ District Education Officers in low-performing states receive ASER reports every 
 
 **On data recency:** ASER updates every 2 years — too slow for weekly decisions. NIPUN Compass closes this gap with monthly block-level micro-tests from BEOs, trajectory forecasts, and principal feedback every 3 months. ASER becomes the ground-truth audit; BEO-submitted data becomes the steering wheel.
 
-[**Live Demo →**](https://YOUR_DEPLOY_URL_HERE)
+[**Live App →**](https://dharunkumar-g-nipun-appmain-6i5wwu.streamlit.app/)
 
 ---
 
@@ -52,7 +52,7 @@ pip install -r requirements.txt
 streamlit run app/main.py
 ```
 
-[**Live Demo →**](https://YOUR_DEPLOY_URL_HERE) — no install needed.
+[**Live App →**](https://dharunkumar-g-nipun-appmain-6i5wwu.streamlit.app/) — no install needed.
 
 ---
 
