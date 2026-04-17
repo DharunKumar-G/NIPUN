@@ -26,8 +26,4 @@ def setup_page(title: str = "NIPUN Compass", layout: str = "wide") -> None:
 
 def render_footer() -> None:
     st.markdown("---")
-    st.caption(
-        "**NIPUN Compass** · Built by Dharun Kumar · Kalvium Coimbatore · April 2026 · "
-        "Flexera Product Engineering Challenge — Round 1 Submission · "
-        "Data: ASER Rural 2008–2022 (asercentre.org)"
-    )
+    st.caption("**NIPUN Compass** · Data: ASER Rural 2008–2022 (asercentre.org)")

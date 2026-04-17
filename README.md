@@ -2,7 +2,7 @@
 
 **The Monday-morning tool for District Education Officers.**
 
-[**Live Demo →**](https://YOUR_DEPLOY_URL_HERE) &nbsp;·&nbsp; [**Video Walkthrough →**](https://loom.com/share/YOUR_ID_HERE)
+[**Live Demo →**](https://YOUR_DEPLOY_URL_HERE)
 
 ---
 
@@ -74,7 +74,3 @@ streamlit run app/main.py
 
 [**Live Demo →**](https://YOUR_DEPLOY_URL_HERE) — no install needed.
 
----
-
-*Built by Dharun Kumar · Kalvium Coimbatore · April 2026*
-*Flexera Product Engineering Challenge — Round 1*
