@@ -1,0 +1,9 @@
+/* NIPUN Compass — custom styles */
+/* Colors per Section 8.3 */
+:root {
+    --primary:   #0F3057;  /* deep navy */
+    --accent:    #E76F24;  /* saffron-adjacent */
+    --danger:    #C2362F;  /* crimson */
+    --success:   #4A7C59;  /* olive green */
+    --neutral:   #F8F5F0;  /* warm off-white background */
+}

@@ -1,0 +1,14 @@
+[theme]
+primaryColor = "#0F3057"        # Deep navy — govt-appropriate
+backgroundColor = "#F8F5F0"     # Warm off-white
+secondaryBackgroundColor = "#EDEAE5"
+textColor = "#1A1A1A"
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false
+
+[server]
+headless = true
+enableCORS = false
+enableXsrfProtection = true
