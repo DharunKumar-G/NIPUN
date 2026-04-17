@@ -1,0 +1,479 @@
+year,state,region,grade,subject,metric,scope,pct_all_schools,pct_govt,pct_pvt,data_type,source
+2019,All India,National,3,arithmetic,can_do_subtraction,National,27.9,22.1,40.2,Regular Survey,ASER 2019 Rural
+2019,All India,National,3,reading,can_read_story,National,17.7,13.1,28.9,Regular Survey,ASER 2019 Rural
+2019,All India,National,5,arithmetic,can_do_division,National,26.7,21.4,38.5,Regular Survey,ASER 2019 Rural
+2019,All India,National,5,reading,can_read_story,National,50.5,44.2,65.8,Regular Survey,ASER 2019 Rural
+2019,All India,National,8,arithmetic,can_do_division,National,44.1,38.7,55.9,Regular Survey,ASER 2019 Rural
+2019,All India,National,8,reading,can_read_story,National,72.8,67.4,83.2,Regular Survey,ASER 2019 Rural
+2019,Andhra Pradesh,South,3,arithmetic,can_do_subtraction,State,32.6,,,Regular Survey,ASER 2019 Rural
+2019,Andhra Pradesh,South,3,reading,can_read_story,State,24.6,,,Regular Survey,ASER 2019 Rural
+2019,Andhra Pradesh,South,5,arithmetic,can_do_division,State,30.2,,,Regular Survey,ASER 2019 Rural
+2019,Andhra Pradesh,South,5,reading,can_read_story,State,67.1,,,Regular Survey,ASER 2019 Rural
+2019,Arunachal Pradesh,East/NE,3,arithmetic,can_do_subtraction,State,10.4,,,Regular Survey,ASER 2019 Rural
+2019,Arunachal Pradesh,East/NE,3,reading,can_read_story,State,8.4,,,Regular Survey,ASER 2019 Rural
+2019,Arunachal Pradesh,East/NE,5,arithmetic,can_do_division,State,12.1,,,Regular Survey,ASER 2019 Rural
+2019,Arunachal Pradesh,East/NE,5,reading,can_read_story,State,30.1,,,Regular Survey,ASER 2019 Rural
+2019,Assam,East/NE,3,arithmetic,can_do_subtraction,State,14.2,,,Regular Survey,ASER 2019 Rural
+2019,Assam,East/NE,3,reading,can_read_story,State,11.8,,,Regular Survey,ASER 2019 Rural
+2019,Assam,East/NE,5,arithmetic,can_do_division,State,18.9,,,Regular Survey,ASER 2019 Rural
+2019,Assam,East/NE,5,reading,can_read_story,State,38.4,,,Regular Survey,ASER 2019 Rural
+2019,Bihar,East/NE,3,arithmetic,can_do_subtraction,State,18.6,,,Regular Survey,ASER 2019 Rural
+2019,Bihar,East/NE,3,reading,can_read_story,State,12.9,,,Regular Survey,ASER 2019 Rural
+2019,Bihar,East/NE,5,arithmetic,can_do_division,State,27.4,,,Regular Survey,ASER 2019 Rural
+2019,Bihar,East/NE,5,reading,can_read_story,State,42.6,,,Regular Survey,ASER 2019 Rural
+2019,Chhattisgarh,Central,3,arithmetic,can_do_subtraction,State,24.8,,,Regular Survey,ASER 2019 Rural
+2019,Chhattisgarh,Central,3,reading,can_read_story,State,19.6,,,Regular Survey,ASER 2019 Rural
+2019,Chhattisgarh,Central,5,arithmetic,can_do_division,State,28.6,,,Regular Survey,ASER 2019 Rural
+2019,Chhattisgarh,Central,5,reading,can_read_story,State,55.8,,,Regular Survey,ASER 2019 Rural
+2019,Gujarat,West,3,arithmetic,can_do_subtraction,State,28.4,,,Regular Survey,ASER 2019 Rural
+2019,Gujarat,West,3,reading,can_read_story,State,23.4,,,Regular Survey,ASER 2019 Rural
+2019,Gujarat,West,5,arithmetic,can_do_division,State,22.4,,,Regular Survey,ASER 2019 Rural
+2019,Gujarat,West,5,reading,can_read_story,State,58.3,,,Regular Survey,ASER 2019 Rural
+2019,Haryana,North,3,arithmetic,can_do_subtraction,State,27.9,,,Regular Survey,ASER 2019 Rural
+2019,Haryana,North,3,reading,can_read_story,State,19.8,,,Regular Survey,ASER 2019 Rural
+2019,Haryana,North,5,arithmetic,can_do_division,State,33.1,,,Regular Survey,ASER 2019 Rural
+2019,Haryana,North,5,reading,can_read_story,State,62.1,,,Regular Survey,ASER 2019 Rural
+2019,Himachal Pradesh,North,3,arithmetic,can_do_subtraction,State,44.1,,,Regular Survey,ASER 2019 Rural
+2019,Himachal Pradesh,North,3,reading,can_read_story,State,42.1,,,Regular Survey,ASER 2019 Rural
+2019,Himachal Pradesh,North,5,arithmetic,can_do_division,State,50.4,,,Regular Survey,ASER 2019 Rural
+2019,Himachal Pradesh,North,5,reading,can_read_story,State,74.2,,,Regular Survey,ASER 2019 Rural
+2019,Jammu and Kashmir,North,3,arithmetic,can_do_subtraction,State,22.4,,,Regular Survey,ASER 2019 Rural
+2019,Jammu and Kashmir,North,3,reading,can_read_story,State,18.4,,,Regular Survey,ASER 2019 Rural
+2019,Jammu and Kashmir,North,5,arithmetic,can_do_division,State,28.9,,,Regular Survey,ASER 2019 Rural
+2019,Jammu and Kashmir,North,5,reading,can_read_story,State,60.4,,,Regular Survey,ASER 2019 Rural
+2019,Jharkhand,East/NE,3,arithmetic,can_do_subtraction,State,14.8,,,Regular Survey,ASER 2019 Rural
+2019,Jharkhand,East/NE,3,reading,can_read_story,State,12.1,,,Regular Survey,ASER 2019 Rural
+2019,Jharkhand,East/NE,5,arithmetic,can_do_division,State,19.6,,,Regular Survey,ASER 2019 Rural
+2019,Jharkhand,East/NE,5,reading,can_read_story,State,39.7,,,Regular Survey,ASER 2019 Rural
+2019,Karnataka,South,3,arithmetic,can_do_subtraction,State,27.1,,,Regular Survey,ASER 2019 Rural
+2019,Karnataka,South,3,reading,can_read_story,State,23.1,,,Regular Survey,ASER 2019 Rural
+2019,Karnataka,South,5,arithmetic,can_do_division,State,23.4,,,Regular Survey,ASER 2019 Rural
+2019,Karnataka,South,5,reading,can_read_story,State,62.5,,,Regular Survey,ASER 2019 Rural
+2019,Kerala,South,3,arithmetic,can_do_subtraction,State,46.8,,,Regular Survey,ASER 2019 Rural
+2019,Kerala,South,3,reading,can_read_story,State,52.4,,,Regular Survey,ASER 2019 Rural
+2019,Kerala,South,5,arithmetic,can_do_division,State,41.2,,,Regular Survey,ASER 2019 Rural
+2019,Kerala,South,5,reading,can_read_story,State,79.1,,,Regular Survey,ASER 2019 Rural
+2019,Madhya Pradesh,Central,3,arithmetic,can_do_subtraction,State,17.4,,,Regular Survey,ASER 2019 Rural
+2019,Madhya Pradesh,Central,3,reading,can_read_story,State,14.2,,,Regular Survey,ASER 2019 Rural
+2019,Madhya Pradesh,Central,5,arithmetic,can_do_division,State,18.3,,,Regular Survey,ASER 2019 Rural
+2019,Madhya Pradesh,Central,5,reading,can_read_story,State,40.8,,,Regular Survey,ASER 2019 Rural
+2019,Maharashtra,West,3,arithmetic,can_do_subtraction,State,33.1,,,Regular Survey,ASER 2019 Rural
+2019,Maharashtra,West,3,reading,can_read_story,State,29.8,,,Regular Survey,ASER 2019 Rural
+2019,Maharashtra,West,5,arithmetic,can_do_division,State,34.8,,,Regular Survey,ASER 2019 Rural
+2019,Maharashtra,West,5,reading,can_read_story,State,70.9,,,Regular Survey,ASER 2019 Rural
+2019,Manipur,East/NE,3,arithmetic,can_do_subtraction,State,12.6,,,Regular Survey,ASER 2019 Rural
+2019,Manipur,East/NE,3,reading,can_read_story,State,10.4,,,Regular Survey,ASER 2019 Rural
+2019,Manipur,East/NE,5,arithmetic,can_do_division,State,14.2,,,Regular Survey,ASER 2019 Rural
+2019,Manipur,East/NE,5,reading,can_read_story,State,37.4,,,Regular Survey,ASER 2019 Rural
+2019,Meghalaya,East/NE,3,arithmetic,can_do_subtraction,State,9.1,,,Regular Survey,ASER 2019 Rural
+2019,Meghalaya,East/NE,3,reading,can_read_story,State,7.6,,,Regular Survey,ASER 2019 Rural
+2019,Meghalaya,East/NE,5,arithmetic,can_do_division,State,10.4,,,Regular Survey,ASER 2019 Rural
+2019,Meghalaya,East/NE,5,reading,can_read_story,State,28.7,,,Regular Survey,ASER 2019 Rural
+2019,Mizoram,East/NE,3,arithmetic,can_do_subtraction,State,31.4,,,Regular Survey,ASER 2019 Rural
+2019,Mizoram,East/NE,3,reading,can_read_story,State,28.9,,,Regular Survey,ASER 2019 Rural
+2019,Mizoram,East/NE,5,arithmetic,can_do_division,State,29.7,,,Regular Survey,ASER 2019 Rural
+2019,Mizoram,East/NE,5,reading,can_read_story,State,65.2,,,Regular Survey,ASER 2019 Rural
+2019,Nagaland,East/NE,3,arithmetic,can_do_subtraction,State,17.1,,,Regular Survey,ASER 2019 Rural
+2019,Nagaland,East/NE,3,reading,can_read_story,State,14.6,,,Regular Survey,ASER 2019 Rural
+2019,Nagaland,East/NE,5,arithmetic,can_do_division,State,18.7,,,Regular Survey,ASER 2019 Rural
+2019,Nagaland,East/NE,5,reading,can_read_story,State,44.8,,,Regular Survey,ASER 2019 Rural
+2019,Odisha,East/NE,3,arithmetic,can_do_subtraction,State,28.6,,,Regular Survey,ASER 2019 Rural
+2019,Odisha,East/NE,3,reading,can_read_story,State,22.8,,,Regular Survey,ASER 2019 Rural
+2019,Odisha,East/NE,5,arithmetic,can_do_division,State,26.4,,,Regular Survey,ASER 2019 Rural
+2019,Odisha,East/NE,5,reading,can_read_story,State,67.3,,,Regular Survey,ASER 2019 Rural
+2019,Punjab,North,3,arithmetic,can_do_subtraction,State,41.8,,,Regular Survey,ASER 2019 Rural
+2019,Punjab,North,3,reading,can_read_story,State,37.4,,,Regular Survey,ASER 2019 Rural
+2019,Punjab,North,5,arithmetic,can_do_division,State,47.6,,,Regular Survey,ASER 2019 Rural
+2019,Punjab,North,5,reading,can_read_story,State,73.2,,,Regular Survey,ASER 2019 Rural
+2019,Rajasthan,West,3,arithmetic,can_do_subtraction,State,18.4,,,Regular Survey,ASER 2019 Rural
+2019,Rajasthan,West,3,reading,can_read_story,State,15.4,,,Regular Survey,ASER 2019 Rural
+2019,Rajasthan,West,5,arithmetic,can_do_division,State,17.4,,,Regular Survey,ASER 2019 Rural
+2019,Rajasthan,West,5,reading,can_read_story,State,45.6,,,Regular Survey,ASER 2019 Rural
+2019,Sikkim,East/NE,3,arithmetic,can_do_subtraction,State,29.4,,,Regular Survey,ASER 2019 Rural
+2019,Sikkim,East/NE,3,reading,can_read_story,State,24.6,,,Regular Survey,ASER 2019 Rural
+2019,Sikkim,East/NE,5,arithmetic,can_do_division,State,32.8,,,Regular Survey,ASER 2019 Rural
+2019,Sikkim,East/NE,5,reading,can_read_story,State,57.9,,,Regular Survey,ASER 2019 Rural
+2019,Tamil Nadu,South,3,arithmetic,can_do_subtraction,State,39.4,,,Regular Survey,ASER 2019 Rural
+2019,Tamil Nadu,South,3,reading,can_read_story,State,36.9,,,Regular Survey,ASER 2019 Rural
+2019,Tamil Nadu,South,5,arithmetic,can_do_division,State,38.6,,,Regular Survey,ASER 2019 Rural
+2019,Tamil Nadu,South,5,reading,can_read_story,State,71.4,,,Regular Survey,ASER 2019 Rural
+2019,Telangana,South,3,arithmetic,can_do_subtraction,State,29.8,,,Regular Survey,ASER 2019 Rural
+2019,Telangana,South,3,reading,can_read_story,State,23.9,,,Regular Survey,ASER 2019 Rural
+2019,Telangana,South,5,arithmetic,can_do_division,State,27.9,,,Regular Survey,ASER 2019 Rural
+2019,Telangana,South,5,reading,can_read_story,State,68.9,,,Regular Survey,ASER 2019 Rural
+2019,Tripura,East/NE,3,arithmetic,can_do_subtraction,State,19.6,,,Regular Survey,ASER 2019 Rural
+2019,Tripura,East/NE,3,reading,can_read_story,State,16.8,,,Regular Survey,ASER 2019 Rural
+2019,Tripura,East/NE,5,arithmetic,can_do_division,State,17.6,,,Regular Survey,ASER 2019 Rural
+2019,Tripura,East/NE,5,reading,can_read_story,State,49.8,,,Regular Survey,ASER 2019 Rural
+2019,Uttar Pradesh,Central,3,arithmetic,can_do_subtraction,State,16.1,,,Regular Survey,ASER 2019 Rural
+2019,Uttar Pradesh,Central,3,reading,can_read_story,State,13.1,,,Regular Survey,ASER 2019 Rural
+2019,Uttar Pradesh,Central,5,arithmetic,can_do_division,State,16.4,,,Regular Survey,ASER 2019 Rural
+2019,Uttar Pradesh,Central,5,reading,can_read_story,State,38.7,,,Regular Survey,ASER 2019 Rural
+2019,Uttarakhand,North,3,arithmetic,can_do_subtraction,State,30.4,,,Regular Survey,ASER 2019 Rural
+2019,Uttarakhand,North,3,reading,can_read_story,State,26.4,,,Regular Survey,ASER 2019 Rural
+2019,Uttarakhand,North,5,arithmetic,can_do_division,State,29.8,,,Regular Survey,ASER 2019 Rural
+2019,Uttarakhand,North,5,reading,can_read_story,State,63.4,,,Regular Survey,ASER 2019 Rural
+2019,West Bengal,East/NE,3,arithmetic,can_do_subtraction,State,27.8,,,Regular Survey,ASER 2019 Rural
+2019,West Bengal,East/NE,3,reading,can_read_story,State,21.8,,,Regular Survey,ASER 2019 Rural
+2019,West Bengal,East/NE,5,arithmetic,can_do_division,State,30.9,,,Regular Survey,ASER 2019 Rural
+2019,West Bengal,East/NE,5,reading,can_read_story,State,61.7,,,Regular Survey,ASER 2019 Rural
+2020,All India,National,3,arithmetic,can_do_subtraction,National,22.3,17.4,33.8,COVID Phone Survey,ASER 2020 Wave 2 (COVID Phone Survey)
+2020,All India,National,3,reading,can_read_story,National,13.1,9.8,21.4,COVID Phone Survey,ASER 2020 Wave 2 (COVID Phone Survey)
+2020,All India,National,5,arithmetic,can_do_division,National,20.1,15.6,30.9,COVID Phone Survey,ASER 2020 Wave 2 (COVID Phone Survey)
+2020,All India,National,5,reading,can_read_story,National,38.8,32.6,55.1,COVID Phone Survey,ASER 2020 Wave 2 (COVID Phone Survey)
+2020,All India,National,8,arithmetic,can_do_division,National,40.2,34.6,52.4,COVID Phone Survey,ASER 2020 Wave 2 (COVID Phone Survey)
+2020,All India,National,8,reading,can_read_story,National,68.1,62.6,79.4,COVID Phone Survey,ASER 2020 Wave 2 (COVID Phone Survey)
+2021,All India,National,3,arithmetic,can_do_subtraction,National,24.1,19.0,36.4,Regular Survey,ASER 2021 Rural
+2021,All India,National,3,reading,can_read_story,National,14.8,10.9,24.7,Regular Survey,ASER 2021 Rural
+2021,All India,National,5,arithmetic,can_do_division,National,20.8,16.2,31.7,Regular Survey,ASER 2021 Rural
+2021,All India,National,5,reading,can_read_story,National,37.9,31.8,54.3,Regular Survey,ASER 2021 Rural
+2021,All India,National,8,arithmetic,can_do_division,National,41.4,35.9,53.7,Regular Survey,ASER 2021 Rural
+2021,All India,National,8,reading,can_read_story,National,69.3,63.9,80.1,Regular Survey,ASER 2021 Rural
+2021,Andhra Pradesh,South,3,arithmetic,can_do_subtraction,State,24.1,,,Regular Survey,ASER 2021 Rural
+2021,Andhra Pradesh,South,3,reading,can_read_story,State,16.4,,,Regular Survey,ASER 2021 Rural
+2021,Andhra Pradesh,South,5,arithmetic,can_do_division,State,22.1,,,Regular Survey,ASER 2021 Rural
+2021,Andhra Pradesh,South,5,reading,can_read_story,State,58.3,,,Regular Survey,ASER 2021 Rural
+2021,Arunachal Pradesh,East/NE,3,arithmetic,can_do_subtraction,State,6.8,,,Regular Survey,ASER 2021 Rural
+2021,Arunachal Pradesh,East/NE,3,reading,can_read_story,State,5.1,,,Regular Survey,ASER 2021 Rural
+2021,Arunachal Pradesh,East/NE,5,arithmetic,can_do_division,State,8.4,,,Regular Survey,ASER 2021 Rural
+2021,Arunachal Pradesh,East/NE,5,reading,can_read_story,State,22.4,,,Regular Survey,ASER 2021 Rural
+2021,Assam,East/NE,3,arithmetic,can_do_subtraction,State,9.1,,,Regular Survey,ASER 2021 Rural
+2021,Assam,East/NE,3,reading,can_read_story,State,7.4,,,Regular Survey,ASER 2021 Rural
+2021,Assam,East/NE,5,arithmetic,can_do_division,State,13.1,,,Regular Survey,ASER 2021 Rural
+2021,Assam,East/NE,5,reading,can_read_story,State,30.1,,,Regular Survey,ASER 2021 Rural
+2021,Bihar,East/NE,3,arithmetic,can_do_subtraction,State,12.4,,,Regular Survey,ASER 2021 Rural
+2021,Bihar,East/NE,3,reading,can_read_story,State,8.1,,,Regular Survey,ASER 2021 Rural
+2021,Bihar,East/NE,5,arithmetic,can_do_division,State,19.6,,,Regular Survey,ASER 2021 Rural
+2021,Bihar,East/NE,5,reading,can_read_story,State,33.8,,,Regular Survey,ASER 2021 Rural
+2021,Chhattisgarh,Central,3,arithmetic,can_do_subtraction,State,17.1,,,Regular Survey,ASER 2021 Rural
+2021,Chhattisgarh,Central,3,reading,can_read_story,State,13.1,,,Regular Survey,ASER 2021 Rural
+2021,Chhattisgarh,Central,5,arithmetic,can_do_division,State,20.7,,,Regular Survey,ASER 2021 Rural
+2021,Chhattisgarh,Central,5,reading,can_read_story,State,46.4,,,Regular Survey,ASER 2021 Rural
+2021,Gujarat,West,3,arithmetic,can_do_subtraction,State,20.6,,,Regular Survey,ASER 2021 Rural
+2021,Gujarat,West,3,reading,can_read_story,State,15.8,,,Regular Survey,ASER 2021 Rural
+2021,Gujarat,West,5,arithmetic,can_do_division,State,15.8,,,Regular Survey,ASER 2021 Rural
+2021,Gujarat,West,5,reading,can_read_story,State,48.2,,,Regular Survey,ASER 2021 Rural
+2021,Haryana,North,3,arithmetic,can_do_subtraction,State,20.1,,,Regular Survey,ASER 2021 Rural
+2021,Haryana,North,3,reading,can_read_story,State,13.4,,,Regular Survey,ASER 2021 Rural
+2021,Haryana,North,5,arithmetic,can_do_division,State,24.9,,,Regular Survey,ASER 2021 Rural
+2021,Haryana,North,5,reading,can_read_story,State,52.7,,,Regular Survey,ASER 2021 Rural
+2021,Himachal Pradesh,North,3,arithmetic,can_do_subtraction,State,35.8,,,Regular Survey,ASER 2021 Rural
+2021,Himachal Pradesh,North,3,reading,can_read_story,State,33.8,,,Regular Survey,ASER 2021 Rural
+2021,Himachal Pradesh,North,5,arithmetic,can_do_division,State,41.2,,,Regular Survey,ASER 2021 Rural
+2021,Himachal Pradesh,North,5,reading,can_read_story,State,65.3,,,Regular Survey,ASER 2021 Rural
+2021,Jammu and Kashmir,North,3,arithmetic,can_do_subtraction,State,15.1,,,Regular Survey,ASER 2021 Rural
+2021,Jammu and Kashmir,North,3,reading,can_read_story,State,12.1,,,Regular Survey,ASER 2021 Rural
+2021,Jammu and Kashmir,North,5,arithmetic,can_do_division,State,20.6,,,Regular Survey,ASER 2021 Rural
+2021,Jammu and Kashmir,North,5,reading,can_read_story,State,51.1,,,Regular Survey,ASER 2021 Rural
+2021,Jharkhand,East/NE,3,arithmetic,can_do_subtraction,State,9.4,,,Regular Survey,ASER 2021 Rural
+2021,Jharkhand,East/NE,3,reading,can_read_story,State,7.8,,,Regular Survey,ASER 2021 Rural
+2021,Jharkhand,East/NE,5,arithmetic,can_do_division,State,13.4,,,Regular Survey,ASER 2021 Rural
+2021,Jharkhand,East/NE,5,reading,can_read_story,State,31.2,,,Regular Survey,ASER 2021 Rural
+2021,Karnataka,South,3,arithmetic,can_do_subtraction,State,19.4,,,Regular Survey,ASER 2021 Rural
+2021,Karnataka,South,3,reading,can_read_story,State,15.6,,,Regular Survey,ASER 2021 Rural
+2021,Karnataka,South,5,arithmetic,can_do_division,State,16.8,,,Regular Survey,ASER 2021 Rural
+2021,Karnataka,South,5,reading,can_read_story,State,53.1,,,Regular Survey,ASER 2021 Rural
+2021,Kerala,South,3,arithmetic,can_do_subtraction,State,38.4,,,Regular Survey,ASER 2021 Rural
+2021,Kerala,South,3,reading,can_read_story,State,43.9,,,Regular Survey,ASER 2021 Rural
+2021,Kerala,South,5,arithmetic,can_do_division,State,33.1,,,Regular Survey,ASER 2021 Rural
+2021,Kerala,South,5,reading,can_read_story,State,71.2,,,Regular Survey,ASER 2021 Rural
+2021,Madhya Pradesh,Central,3,arithmetic,can_do_subtraction,State,11.2,,,Regular Survey,ASER 2021 Rural
+2021,Madhya Pradesh,Central,3,reading,can_read_story,State,8.9,,,Regular Survey,ASER 2021 Rural
+2021,Madhya Pradesh,Central,5,arithmetic,can_do_division,State,12.4,,,Regular Survey,ASER 2021 Rural
+2021,Madhya Pradesh,Central,5,reading,can_read_story,State,31.9,,,Regular Survey,ASER 2021 Rural
+2021,Maharashtra,West,3,arithmetic,can_do_subtraction,State,24.8,,,Regular Survey,ASER 2021 Rural
+2021,Maharashtra,West,3,reading,can_read_story,State,21.4,,,Regular Survey,ASER 2021 Rural
+2021,Maharashtra,West,5,arithmetic,can_do_division,State,26.4,,,Regular Survey,ASER 2021 Rural
+2021,Maharashtra,West,5,reading,can_read_story,State,61.4,,,Regular Survey,ASER 2021 Rural
+2021,Manipur,East/NE,3,arithmetic,can_do_subtraction,State,8.1,,,Regular Survey,ASER 2021 Rural
+2021,Manipur,East/NE,3,reading,can_read_story,State,6.8,,,Regular Survey,ASER 2021 Rural
+2021,Manipur,East/NE,5,arithmetic,can_do_division,State,9.6,,,Regular Survey,ASER 2021 Rural
+2021,Manipur,East/NE,5,reading,can_read_story,State,29.3,,,Regular Survey,ASER 2021 Rural
+2021,Meghalaya,East/NE,3,arithmetic,can_do_subtraction,State,5.8,,,Regular Survey,ASER 2021 Rural
+2021,Meghalaya,East/NE,3,reading,can_read_story,State,4.4,,,Regular Survey,ASER 2021 Rural
+2021,Meghalaya,East/NE,5,arithmetic,can_do_division,State,7.1,,,Regular Survey,ASER 2021 Rural
+2021,Meghalaya,East/NE,5,reading,can_read_story,State,21.6,,,Regular Survey,ASER 2021 Rural
+2021,Mizoram,East/NE,3,arithmetic,can_do_subtraction,State,23.1,,,Regular Survey,ASER 2021 Rural
+2021,Mizoram,East/NE,3,reading,can_read_story,State,20.6,,,Regular Survey,ASER 2021 Rural
+2021,Mizoram,East/NE,5,arithmetic,can_do_division,State,21.4,,,Regular Survey,ASER 2021 Rural
+2021,Mizoram,East/NE,5,reading,can_read_story,State,56.1,,,Regular Survey,ASER 2021 Rural
+2021,Nagaland,East/NE,3,arithmetic,can_do_subtraction,State,11.4,,,Regular Survey,ASER 2021 Rural
+2021,Nagaland,East/NE,3,reading,can_read_story,State,9.4,,,Regular Survey,ASER 2021 Rural
+2021,Nagaland,East/NE,5,arithmetic,can_do_division,State,12.9,,,Regular Survey,ASER 2021 Rural
+2021,Nagaland,East/NE,5,reading,can_read_story,State,36.2,,,Regular Survey,ASER 2021 Rural
+2021,Odisha,East/NE,3,arithmetic,can_do_subtraction,State,20.9,,,Regular Survey,ASER 2021 Rural
+2021,Odisha,East/NE,3,reading,can_read_story,State,14.9,,,Regular Survey,ASER 2021 Rural
+2021,Odisha,East/NE,5,arithmetic,can_do_division,State,18.9,,,Regular Survey,ASER 2021 Rural
+2021,Odisha,East/NE,5,reading,can_read_story,State,57.9,,,Regular Survey,ASER 2021 Rural
+2021,Punjab,North,3,arithmetic,can_do_subtraction,State,33.4,,,Regular Survey,ASER 2021 Rural
+2021,Punjab,North,3,reading,can_read_story,State,29.1,,,Regular Survey,ASER 2021 Rural
+2021,Punjab,North,5,arithmetic,can_do_division,State,38.4,,,Regular Survey,ASER 2021 Rural
+2021,Punjab,North,5,reading,can_read_story,State,63.8,,,Regular Survey,ASER 2021 Rural
+2021,Rajasthan,West,3,arithmetic,can_do_subtraction,State,12.1,,,Regular Survey,ASER 2021 Rural
+2021,Rajasthan,West,3,reading,can_read_story,State,9.8,,,Regular Survey,ASER 2021 Rural
+2021,Rajasthan,West,5,arithmetic,can_do_division,State,11.8,,,Regular Survey,ASER 2021 Rural
+2021,Rajasthan,West,5,reading,can_read_story,State,36.4,,,Regular Survey,ASER 2021 Rural
+2021,Sikkim,East/NE,3,arithmetic,can_do_subtraction,State,21.8,,,Regular Survey,ASER 2021 Rural
+2021,Sikkim,East/NE,3,reading,can_read_story,State,17.1,,,Regular Survey,ASER 2021 Rural
+2021,Sikkim,East/NE,5,arithmetic,can_do_division,State,24.6,,,Regular Survey,ASER 2021 Rural
+2021,Sikkim,East/NE,5,reading,can_read_story,State,48.4,,,Regular Survey,ASER 2021 Rural
+2021,Tamil Nadu,South,3,arithmetic,can_do_subtraction,State,31.1,,,Regular Survey,ASER 2021 Rural
+2021,Tamil Nadu,South,3,reading,can_read_story,State,28.4,,,Regular Survey,ASER 2021 Rural
+2021,Tamil Nadu,South,5,arithmetic,can_do_division,State,30.4,,,Regular Survey,ASER 2021 Rural
+2021,Tamil Nadu,South,5,reading,can_read_story,State,62.3,,,Regular Survey,ASER 2021 Rural
+2021,Telangana,South,3,arithmetic,can_do_subtraction,State,21.7,,,Regular Survey,ASER 2021 Rural
+2021,Telangana,South,3,reading,can_read_story,State,16.1,,,Regular Survey,ASER 2021 Rural
+2021,Telangana,South,5,arithmetic,can_do_division,State,19.8,,,Regular Survey,ASER 2021 Rural
+2021,Telangana,South,5,reading,can_read_story,State,59.8,,,Regular Survey,ASER 2021 Rural
+2021,Tripura,East/NE,3,arithmetic,can_do_subtraction,State,13.2,,,Regular Survey,ASER 2021 Rural
+2021,Tripura,East/NE,3,reading,can_read_story,State,10.9,,,Regular Survey,ASER 2021 Rural
+2021,Tripura,East/NE,5,arithmetic,can_do_division,State,11.9,,,Regular Survey,ASER 2021 Rural
+2021,Tripura,East/NE,5,reading,can_read_story,State,40.6,,,Regular Survey,ASER 2021 Rural
+2021,Uttar Pradesh,Central,3,arithmetic,can_do_subtraction,State,10.4,,,Regular Survey,ASER 2021 Rural
+2021,Uttar Pradesh,Central,3,reading,can_read_story,State,8.1,,,Regular Survey,ASER 2021 Rural
+2021,Uttar Pradesh,Central,5,arithmetic,can_do_division,State,10.8,,,Regular Survey,ASER 2021 Rural
+2021,Uttar Pradesh,Central,5,reading,can_read_story,State,29.8,,,Regular Survey,ASER 2021 Rural
+2021,Uttarakhand,North,3,arithmetic,can_do_subtraction,State,22.6,,,Regular Survey,ASER 2021 Rural
+2021,Uttarakhand,North,3,reading,can_read_story,State,18.1,,,Regular Survey,ASER 2021 Rural
+2021,Uttarakhand,North,5,arithmetic,can_do_division,State,21.6,,,Regular Survey,ASER 2021 Rural
+2021,Uttarakhand,North,5,reading,can_read_story,State,54.1,,,Regular Survey,ASER 2021 Rural
+2021,West Bengal,East/NE,3,arithmetic,can_do_subtraction,State,19.9,,,Regular Survey,ASER 2021 Rural
+2021,West Bengal,East/NE,3,reading,can_read_story,State,14.4,,,Regular Survey,ASER 2021 Rural
+2021,West Bengal,East/NE,5,arithmetic,can_do_division,State,22.7,,,Regular Survey,ASER 2021 Rural
+2021,West Bengal,East/NE,5,reading,can_read_story,State,52.4,,,Regular Survey,ASER 2021 Rural
+2022,All India,National,3,arithmetic,can_do_subtraction,National,28.5,23.4,41.0,Regular Survey,ASER 2022 Rural
+2022,All India,National,3,reading,can_read_story,National,20.5,15.8,32.7,Regular Survey,ASER 2022 Rural
+2022,All India,National,5,arithmetic,can_do_division,National,25.6,20.4,37.5,Regular Survey,ASER 2022 Rural
+2022,All India,National,5,reading,can_read_story,National,42.8,36.2,60.8,Regular Survey,ASER 2022 Rural
+2022,All India,National,8,arithmetic,can_do_division,National,44.7,39.3,56.8,Regular Survey,ASER 2022 Rural
+2022,All India,National,8,reading,can_read_story,National,73.1,67.9,83.8,Regular Survey,ASER 2022 Rural
+2022,Andhra Pradesh,South,3,arithmetic,can_do_subtraction,State,30.8,,,Regular Survey,ASER 2022 Rural
+2022,Andhra Pradesh,South,3,reading,can_read_story,State,22.8,,,Regular Survey,ASER 2022 Rural
+2022,Andhra Pradesh,South,5,arithmetic,can_do_division,State,28.4,,,Regular Survey,ASER 2022 Rural
+2022,Andhra Pradesh,South,5,reading,can_read_story,State,65.3,,,Regular Survey,ASER 2022 Rural
+2022,Arunachal Pradesh,East/NE,3,arithmetic,can_do_subtraction,State,9.6,,,Regular Survey,ASER 2022 Rural
+2022,Arunachal Pradesh,East/NE,3,reading,can_read_story,State,7.6,,,Regular Survey,ASER 2022 Rural
+2022,Arunachal Pradesh,East/NE,5,arithmetic,can_do_division,State,11.3,,,Regular Survey,ASER 2022 Rural
+2022,Arunachal Pradesh,East/NE,5,reading,can_read_story,State,27.8,,,Regular Survey,ASER 2022 Rural
+2022,Assam,East/NE,3,arithmetic,can_do_subtraction,State,12.9,,,Regular Survey,ASER 2022 Rural
+2022,Assam,East/NE,3,reading,can_read_story,State,10.6,,,Regular Survey,ASER 2022 Rural
+2022,Assam,East/NE,5,arithmetic,can_do_division,State,17.6,,,Regular Survey,ASER 2022 Rural
+2022,Assam,East/NE,5,reading,can_read_story,State,37.1,,,Regular Survey,ASER 2022 Rural
+2022,Bihar,East/NE,3,arithmetic,can_do_subtraction,State,17.1,,,Regular Survey,ASER 2022 Rural
+2022,Bihar,East/NE,3,reading,can_read_story,State,11.8,,,Regular Survey,ASER 2022 Rural
+2022,Bihar,East/NE,5,arithmetic,can_do_division,State,24.5,,,Regular Survey,ASER 2022 Rural
+2022,Bihar,East/NE,5,reading,can_read_story,State,38.3,,,Regular Survey,ASER 2022 Rural
+2022,Chhattisgarh,Central,3,arithmetic,can_do_subtraction,State,23.1,,,Regular Survey,ASER 2022 Rural
+2022,Chhattisgarh,Central,3,reading,can_read_story,State,18.1,,,Regular Survey,ASER 2022 Rural
+2022,Chhattisgarh,Central,5,arithmetic,can_do_division,State,26.4,,,Regular Survey,ASER 2022 Rural
+2022,Chhattisgarh,Central,5,reading,can_read_story,State,53.7,,,Regular Survey,ASER 2022 Rural
+2022,Gujarat,West,3,arithmetic,can_do_subtraction,State,26.8,,,Regular Survey,ASER 2022 Rural
+2022,Gujarat,West,3,reading,can_read_story,State,21.7,,,Regular Survey,ASER 2022 Rural
+2022,Gujarat,West,5,arithmetic,can_do_division,State,20.6,,,Regular Survey,ASER 2022 Rural
+2022,Gujarat,West,5,reading,can_read_story,State,55.4,,,Regular Survey,ASER 2022 Rural
+2022,Haryana,North,3,arithmetic,can_do_subtraction,State,26.2,,,Regular Survey,ASER 2022 Rural
+2022,Haryana,North,3,reading,can_read_story,State,18.2,,,Regular Survey,ASER 2022 Rural
+2022,Haryana,North,5,arithmetic,can_do_division,State,31.8,,,Regular Survey,ASER 2022 Rural
+2022,Haryana,North,5,reading,can_read_story,State,60.4,,,Regular Survey,ASER 2022 Rural
+2022,Himachal Pradesh,North,3,arithmetic,can_do_subtraction,State,42.4,,,Regular Survey,ASER 2022 Rural
+2022,Himachal Pradesh,North,3,reading,can_read_story,State,40.4,,,Regular Survey,ASER 2022 Rural
+2022,Himachal Pradesh,North,5,arithmetic,can_do_division,State,48.7,,,Regular Survey,ASER 2022 Rural
+2022,Himachal Pradesh,North,5,reading,can_read_story,State,72.9,,,Regular Survey,ASER 2022 Rural
+2022,Jammu and Kashmir,North,3,arithmetic,can_do_subtraction,State,20.7,,,Regular Survey,ASER 2022 Rural
+2022,Jammu and Kashmir,North,3,reading,can_read_story,State,17.1,,,Regular Survey,ASER 2022 Rural
+2022,Jammu and Kashmir,North,5,arithmetic,can_do_division,State,27.2,,,Regular Survey,ASER 2022 Rural
+2022,Jammu and Kashmir,North,5,reading,can_read_story,State,57.8,,,Regular Survey,ASER 2022 Rural
+2022,Jharkhand,East/NE,3,arithmetic,can_do_subtraction,State,13.4,,,Regular Survey,ASER 2022 Rural
+2022,Jharkhand,East/NE,3,reading,can_read_story,State,11.2,,,Regular Survey,ASER 2022 Rural
+2022,Jharkhand,East/NE,5,arithmetic,can_do_division,State,18.1,,,Regular Survey,ASER 2022 Rural
+2022,Jharkhand,East/NE,5,reading,can_read_story,State,36.9,,,Regular Survey,ASER 2022 Rural
+2022,Karnataka,South,3,arithmetic,can_do_subtraction,State,25.4,,,Regular Survey,ASER 2022 Rural
+2022,Karnataka,South,3,reading,can_read_story,State,21.4,,,Regular Survey,ASER 2022 Rural
+2022,Karnataka,South,5,arithmetic,can_do_division,State,21.9,,,Regular Survey,ASER 2022 Rural
+2022,Karnataka,South,5,reading,can_read_story,State,60.8,,,Regular Survey,ASER 2022 Rural
+2022,Kerala,South,3,arithmetic,can_do_subtraction,State,45.1,,,Regular Survey,ASER 2022 Rural
+2022,Kerala,South,3,reading,can_read_story,State,50.7,,,Regular Survey,ASER 2022 Rural
+2022,Kerala,South,5,arithmetic,can_do_division,State,39.4,,,Regular Survey,ASER 2022 Rural
+2022,Kerala,South,5,reading,can_read_story,State,78.4,,,Regular Survey,ASER 2022 Rural
+2022,Madhya Pradesh,Central,3,arithmetic,can_do_subtraction,State,15.9,,,Regular Survey,ASER 2022 Rural
+2022,Madhya Pradesh,Central,3,reading,can_read_story,State,12.9,,,Regular Survey,ASER 2022 Rural
+2022,Madhya Pradesh,Central,5,arithmetic,can_do_division,State,16.8,,,Regular Survey,ASER 2022 Rural
+2022,Madhya Pradesh,Central,5,reading,can_read_story,State,37.6,,,Regular Survey,ASER 2022 Rural
+2022,Maharashtra,West,3,arithmetic,can_do_subtraction,State,31.4,,,Regular Survey,ASER 2022 Rural
+2022,Maharashtra,West,3,reading,can_read_story,State,28.1,,,Regular Survey,ASER 2022 Rural
+2022,Maharashtra,West,5,arithmetic,can_do_division,State,33.1,,,Regular Survey,ASER 2022 Rural
+2022,Maharashtra,West,5,reading,can_read_story,State,69.2,,,Regular Survey,ASER 2022 Rural
+2022,Manipur,East/NE,3,arithmetic,can_do_subtraction,State,11.4,,,Regular Survey,ASER 2022 Rural
+2022,Manipur,East/NE,3,reading,can_read_story,State,9.6,,,Regular Survey,ASER 2022 Rural
+2022,Manipur,East/NE,5,arithmetic,can_do_division,State,12.8,,,Regular Survey,ASER 2022 Rural
+2022,Manipur,East/NE,5,reading,can_read_story,State,36.1,,,Regular Survey,ASER 2022 Rural
+2022,Meghalaya,East/NE,3,arithmetic,can_do_subtraction,State,8.4,,,Regular Survey,ASER 2022 Rural
+2022,Meghalaya,East/NE,3,reading,can_read_story,State,6.8,,,Regular Survey,ASER 2022 Rural
+2022,Meghalaya,East/NE,5,arithmetic,can_do_division,State,9.6,,,Regular Survey,ASER 2022 Rural
+2022,Meghalaya,East/NE,5,reading,can_read_story,State,26.4,,,Regular Survey,ASER 2022 Rural
+2022,Mizoram,East/NE,3,arithmetic,can_do_subtraction,State,29.7,,,Regular Survey,ASER 2022 Rural
+2022,Mizoram,East/NE,3,reading,can_read_story,State,27.1,,,Regular Survey,ASER 2022 Rural
+2022,Mizoram,East/NE,5,arithmetic,can_do_division,State,28.1,,,Regular Survey,ASER 2022 Rural
+2022,Mizoram,East/NE,5,reading,can_read_story,State,63.7,,,Regular Survey,ASER 2022 Rural
+2022,Nagaland,East/NE,3,arithmetic,can_do_subtraction,State,15.7,,,Regular Survey,ASER 2022 Rural
+2022,Nagaland,East/NE,3,reading,can_read_story,State,13.2,,,Regular Survey,ASER 2022 Rural
+2022,Nagaland,East/NE,5,arithmetic,can_do_division,State,17.4,,,Regular Survey,ASER 2022 Rural
+2022,Nagaland,East/NE,5,reading,can_read_story,State,43.1,,,Regular Survey,ASER 2022 Rural
+2022,Odisha,East/NE,3,arithmetic,can_do_subtraction,State,26.9,,,Regular Survey,ASER 2022 Rural
+2022,Odisha,East/NE,3,reading,can_read_story,State,21.1,,,Regular Survey,ASER 2022 Rural
+2022,Odisha,East/NE,5,arithmetic,can_do_division,State,24.8,,,Regular Survey,ASER 2022 Rural
+2022,Odisha,East/NE,5,reading,can_read_story,State,65.6,,,Regular Survey,ASER 2022 Rural
+2022,Punjab,North,3,arithmetic,can_do_subtraction,State,40.1,,,Regular Survey,ASER 2022 Rural
+2022,Punjab,North,3,reading,can_read_story,State,35.7,,,Regular Survey,ASER 2022 Rural
+2022,Punjab,North,5,arithmetic,can_do_division,State,45.9,,,Regular Survey,ASER 2022 Rural
+2022,Punjab,North,5,reading,can_read_story,State,71.7,,,Regular Survey,ASER 2022 Rural
+2022,Rajasthan,West,3,arithmetic,can_do_subtraction,State,16.9,,,Regular Survey,ASER 2022 Rural
+2022,Rajasthan,West,3,reading,can_read_story,State,14.1,,,Regular Survey,ASER 2022 Rural
+2022,Rajasthan,West,5,arithmetic,can_do_division,State,16.1,,,Regular Survey,ASER 2022 Rural
+2022,Rajasthan,West,5,reading,can_read_story,State,42.7,,,Regular Survey,ASER 2022 Rural
+2022,Sikkim,East/NE,3,arithmetic,can_do_subtraction,State,27.9,,,Regular Survey,ASER 2022 Rural
+2022,Sikkim,East/NE,3,reading,can_read_story,State,23.1,,,Regular Survey,ASER 2022 Rural
+2022,Sikkim,East/NE,5,arithmetic,can_do_division,State,31.2,,,Regular Survey,ASER 2022 Rural
+2022,Sikkim,East/NE,5,reading,can_read_story,State,56.2,,,Regular Survey,ASER 2022 Rural
+2022,Tamil Nadu,South,3,arithmetic,can_do_subtraction,State,37.7,,,Regular Survey,ASER 2022 Rural
+2022,Tamil Nadu,South,3,reading,can_read_story,State,35.2,,,Regular Survey,ASER 2022 Rural
+2022,Tamil Nadu,South,5,arithmetic,can_do_division,State,36.9,,,Regular Survey,ASER 2022 Rural
+2022,Tamil Nadu,South,5,reading,can_read_story,State,69.8,,,Regular Survey,ASER 2022 Rural
+2022,Telangana,South,3,arithmetic,can_do_subtraction,State,28.1,,,Regular Survey,ASER 2022 Rural
+2022,Telangana,South,3,reading,can_read_story,State,22.4,,,Regular Survey,ASER 2022 Rural
+2022,Telangana,South,5,arithmetic,can_do_division,State,26.2,,,Regular Survey,ASER 2022 Rural
+2022,Telangana,South,5,reading,can_read_story,State,67.4,,,Regular Survey,ASER 2022 Rural
+2022,Tripura,East/NE,3,arithmetic,can_do_subtraction,State,18.1,,,Regular Survey,ASER 2022 Rural
+2022,Tripura,East/NE,3,reading,can_read_story,State,15.4,,,Regular Survey,ASER 2022 Rural
+2022,Tripura,East/NE,5,arithmetic,can_do_division,State,16.3,,,Regular Survey,ASER 2022 Rural
+2022,Tripura,East/NE,5,reading,can_read_story,State,47.9,,,Regular Survey,ASER 2022 Rural
+2022,Uttar Pradesh,Central,3,arithmetic,can_do_subtraction,State,19.7,,,Regular Survey,ASER 2022 Rural
+2022,Uttar Pradesh,Central,3,reading,can_read_story,State,16.4,,,Regular Survey,ASER 2022 Rural
+2022,Uttar Pradesh,Central,5,arithmetic,can_do_division,State,15.1,,,Regular Survey,ASER 2022 Rural
+2022,Uttar Pradesh,Central,5,reading,can_read_story,State,38.3,,,Regular Survey,ASER 2022 Rural
+2022,Uttarakhand,North,3,arithmetic,can_do_subtraction,State,28.8,,,Regular Survey,ASER 2022 Rural
+2022,Uttarakhand,North,3,reading,can_read_story,State,24.8,,,Regular Survey,ASER 2022 Rural
+2022,Uttarakhand,North,5,arithmetic,can_do_division,State,28.1,,,Regular Survey,ASER 2022 Rural
+2022,Uttarakhand,North,5,reading,can_read_story,State,61.9,,,Regular Survey,ASER 2022 Rural
+2022,West Bengal,East/NE,3,arithmetic,can_do_subtraction,State,25.9,,,Regular Survey,ASER 2022 Rural
+2022,West Bengal,East/NE,3,reading,can_read_story,State,20.1,,,Regular Survey,ASER 2022 Rural
+2022,West Bengal,East/NE,5,arithmetic,can_do_division,State,29.2,,,Regular Survey,ASER 2022 Rural
+2022,West Bengal,East/NE,5,reading,can_read_story,State,60.1,,,Regular Survey,ASER 2022 Rural
+2023,All India,National,3,arithmetic,can_do_subtraction,National,30.6,25.3,43.8,Regular Survey,ASER 2023 Rural
+2023,All India,National,3,reading,can_read_story,National,23.4,18.2,36.1,Regular Survey,ASER 2023 Rural
+2023,All India,National,5,arithmetic,can_do_division,National,27.7,22.6,39.8,Regular Survey,ASER 2023 Rural
+2023,All India,National,5,reading,can_read_story,National,43.3,36.9,61.4,Regular Survey,ASER 2023 Rural
+2023,All India,National,8,arithmetic,can_do_division,National,47.1,41.8,59.4,Regular Survey,ASER 2023 Rural
+2023,All India,National,8,reading,can_read_story,National,75.6,70.4,85.9,Regular Survey,ASER 2023 Rural
+2023,Andhra Pradesh,South,3,arithmetic,can_do_subtraction,State,33.2,,,Regular Survey,ASER 2023 Rural
+2023,Andhra Pradesh,South,3,reading,can_read_story,State,25.1,,,Regular Survey,ASER 2023 Rural
+2023,Andhra Pradesh,South,5,arithmetic,can_do_division,State,30.1,,,Regular Survey,ASER 2023 Rural
+2023,Andhra Pradesh,South,5,reading,can_read_story,State,66.2,,,Regular Survey,ASER 2023 Rural
+2023,Arunachal Pradesh,East/NE,3,arithmetic,can_do_subtraction,State,11.1,,,Regular Survey,ASER 2023 Rural
+2023,Arunachal Pradesh,East/NE,3,reading,can_read_story,State,9.1,,,Regular Survey,ASER 2023 Rural
+2023,Arunachal Pradesh,East/NE,5,arithmetic,can_do_division,State,12.4,,,Regular Survey,ASER 2023 Rural
+2023,Arunachal Pradesh,East/NE,5,reading,can_read_story,State,29.3,,,Regular Survey,ASER 2023 Rural
+2023,Assam,East/NE,3,arithmetic,can_do_subtraction,State,14.8,,,Regular Survey,ASER 2023 Rural
+2023,Assam,East/NE,3,reading,can_read_story,State,12.3,,,Regular Survey,ASER 2023 Rural
+2023,Assam,East/NE,5,arithmetic,can_do_division,State,19.2,,,Regular Survey,ASER 2023 Rural
+2023,Assam,East/NE,5,reading,can_read_story,State,39.4,,,Regular Survey,ASER 2023 Rural
+2023,Bihar,East/NE,3,arithmetic,can_do_subtraction,State,19.2,,,Regular Survey,ASER 2023 Rural
+2023,Bihar,East/NE,3,reading,can_read_story,State,13.4,,,Regular Survey,ASER 2023 Rural
+2023,Bihar,East/NE,5,arithmetic,can_do_division,State,26.1,,,Regular Survey,ASER 2023 Rural
+2023,Bihar,East/NE,5,reading,can_read_story,State,39.9,,,Regular Survey,ASER 2023 Rural
+2023,Chhattisgarh,Central,3,arithmetic,can_do_subtraction,State,25.6,,,Regular Survey,ASER 2023 Rural
+2023,Chhattisgarh,Central,3,reading,can_read_story,State,20.4,,,Regular Survey,ASER 2023 Rural
+2023,Chhattisgarh,Central,5,arithmetic,can_do_division,State,28.2,,,Regular Survey,ASER 2023 Rural
+2023,Chhattisgarh,Central,5,reading,can_read_story,State,55.3,,,Regular Survey,ASER 2023 Rural
+2023,Gujarat,West,3,arithmetic,can_do_subtraction,State,29.1,,,Regular Survey,ASER 2023 Rural
+2023,Gujarat,West,3,reading,can_read_story,State,24.1,,,Regular Survey,ASER 2023 Rural
+2023,Gujarat,West,5,arithmetic,can_do_division,State,22.1,,,Regular Survey,ASER 2023 Rural
+2023,Gujarat,West,5,reading,can_read_story,State,57.1,,,Regular Survey,ASER 2023 Rural
+2023,Haryana,North,3,arithmetic,can_do_subtraction,State,28.6,,,Regular Survey,ASER 2023 Rural
+2023,Haryana,North,3,reading,can_read_story,State,20.6,,,Regular Survey,ASER 2023 Rural
+2023,Haryana,North,5,arithmetic,can_do_division,State,33.6,,,Regular Survey,ASER 2023 Rural
+2023,Haryana,North,5,reading,can_read_story,State,62.8,,,Regular Survey,ASER 2023 Rural
+2023,Himachal Pradesh,North,3,arithmetic,can_do_subtraction,State,45.7,,,Regular Survey,ASER 2023 Rural
+2023,Himachal Pradesh,North,3,reading,can_read_story,State,43.6,,,Regular Survey,ASER 2023 Rural
+2023,Himachal Pradesh,North,5,arithmetic,can_do_division,State,50.9,,,Regular Survey,ASER 2023 Rural
+2023,Himachal Pradesh,North,5,reading,can_read_story,State,74.8,,,Regular Survey,ASER 2023 Rural
+2023,Jammu and Kashmir,North,3,arithmetic,can_do_subtraction,State,23.1,,,Regular Survey,ASER 2023 Rural
+2023,Jammu and Kashmir,North,3,reading,can_read_story,State,19.2,,,Regular Survey,ASER 2023 Rural
+2023,Jammu and Kashmir,North,5,arithmetic,can_do_division,State,28.8,,,Regular Survey,ASER 2023 Rural
+2023,Jammu and Kashmir,North,5,reading,can_read_story,State,59.6,,,Regular Survey,ASER 2023 Rural
+2023,Jharkhand,East/NE,3,arithmetic,can_do_subtraction,State,15.4,,,Regular Survey,ASER 2023 Rural
+2023,Jharkhand,East/NE,3,reading,can_read_story,State,12.9,,,Regular Survey,ASER 2023 Rural
+2023,Jharkhand,East/NE,5,arithmetic,can_do_division,State,19.8,,,Regular Survey,ASER 2023 Rural
+2023,Jharkhand,East/NE,5,reading,can_read_story,State,38.7,,,Regular Survey,ASER 2023 Rural
+2023,Karnataka,South,3,arithmetic,can_do_subtraction,State,27.9,,,Regular Survey,ASER 2023 Rural
+2023,Karnataka,South,3,reading,can_read_story,State,23.8,,,Regular Survey,ASER 2023 Rural
+2023,Karnataka,South,5,arithmetic,can_do_division,State,23.6,,,Regular Survey,ASER 2023 Rural
+2023,Karnataka,South,5,reading,can_read_story,State,62.3,,,Regular Survey,ASER 2023 Rural
+2023,Kerala,South,3,arithmetic,can_do_subtraction,State,48.2,,,Regular Survey,ASER 2023 Rural
+2023,Kerala,South,3,reading,can_read_story,State,53.9,,,Regular Survey,ASER 2023 Rural
+2023,Kerala,South,5,arithmetic,can_do_division,State,41.7,,,Regular Survey,ASER 2023 Rural
+2023,Kerala,South,5,reading,can_read_story,State,80.1,,,Regular Survey,ASER 2023 Rural
+2023,Madhya Pradesh,Central,3,arithmetic,can_do_subtraction,State,18.1,,,Regular Survey,ASER 2023 Rural
+2023,Madhya Pradesh,Central,3,reading,can_read_story,State,14.8,,,Regular Survey,ASER 2023 Rural
+2023,Madhya Pradesh,Central,5,arithmetic,can_do_division,State,18.6,,,Regular Survey,ASER 2023 Rural
+2023,Madhya Pradesh,Central,5,reading,can_read_story,State,39.2,,,Regular Survey,ASER 2023 Rural
+2023,Maharashtra,West,3,arithmetic,can_do_subtraction,State,34.2,,,Regular Survey,ASER 2023 Rural
+2023,Maharashtra,West,3,reading,can_read_story,State,30.6,,,Regular Survey,ASER 2023 Rural
+2023,Maharashtra,West,5,arithmetic,can_do_division,State,35.2,,,Regular Survey,ASER 2023 Rural
+2023,Maharashtra,West,5,reading,can_read_story,State,71.4,,,Regular Survey,ASER 2023 Rural
+2023,Manipur,East/NE,3,arithmetic,can_do_subtraction,State,13.1,,,Regular Survey,ASER 2023 Rural
+2023,Manipur,East/NE,3,reading,can_read_story,State,11.1,,,Regular Survey,ASER 2023 Rural
+2023,Manipur,East/NE,5,arithmetic,can_do_division,State,14.4,,,Regular Survey,ASER 2023 Rural
+2023,Manipur,East/NE,5,reading,can_read_story,State,37.8,,,Regular Survey,ASER 2023 Rural
+2023,Meghalaya,East/NE,3,arithmetic,can_do_subtraction,State,9.8,,,Regular Survey,ASER 2023 Rural
+2023,Meghalaya,East/NE,3,reading,can_read_story,State,8.1,,,Regular Survey,ASER 2023 Rural
+2023,Meghalaya,East/NE,5,arithmetic,can_do_division,State,10.7,,,Regular Survey,ASER 2023 Rural
+2023,Meghalaya,East/NE,5,reading,can_read_story,State,27.9,,,Regular Survey,ASER 2023 Rural
+2023,Mizoram,East/NE,3,arithmetic,can_do_subtraction,State,32.1,,,Regular Survey,ASER 2023 Rural
+2023,Mizoram,East/NE,3,reading,can_read_story,State,29.7,,,Regular Survey,ASER 2023 Rural
+2023,Mizoram,East/NE,5,arithmetic,can_do_division,State,30.1,,,Regular Survey,ASER 2023 Rural
+2023,Mizoram,East/NE,5,reading,can_read_story,State,65.4,,,Regular Survey,ASER 2023 Rural
+2023,Nagaland,East/NE,3,arithmetic,can_do_subtraction,State,17.8,,,Regular Survey,ASER 2023 Rural
+2023,Nagaland,East/NE,3,reading,can_read_story,State,15.1,,,Regular Survey,ASER 2023 Rural
+2023,Nagaland,East/NE,5,arithmetic,can_do_division,State,18.9,,,Regular Survey,ASER 2023 Rural
+2023,Nagaland,East/NE,5,reading,can_read_story,State,44.9,,,Regular Survey,ASER 2023 Rural
+2023,Odisha,East/NE,3,arithmetic,can_do_subtraction,State,29.4,,,Regular Survey,ASER 2023 Rural
+2023,Odisha,East/NE,3,reading,can_read_story,State,23.4,,,Regular Survey,ASER 2023 Rural
+2023,Odisha,East/NE,5,arithmetic,can_do_division,State,26.7,,,Regular Survey,ASER 2023 Rural
+2023,Odisha,East/NE,5,reading,can_read_story,State,67.8,,,Regular Survey,ASER 2023 Rural
+2023,Punjab,North,3,arithmetic,can_do_subtraction,State,43.2,,,Regular Survey,ASER 2023 Rural
+2023,Punjab,North,3,reading,can_read_story,State,38.9,,,Regular Survey,ASER 2023 Rural
+2023,Punjab,North,5,arithmetic,can_do_division,State,48.1,,,Regular Survey,ASER 2023 Rural
+2023,Punjab,North,5,reading,can_read_story,State,73.6,,,Regular Survey,ASER 2023 Rural
+2023,Rajasthan,West,3,arithmetic,can_do_subtraction,State,19.1,,,Regular Survey,ASER 2023 Rural
+2023,Rajasthan,West,3,reading,can_read_story,State,16.1,,,Regular Survey,ASER 2023 Rural
+2023,Rajasthan,West,5,arithmetic,can_do_division,State,17.8,,,Regular Survey,ASER 2023 Rural
+2023,Rajasthan,West,5,reading,can_read_story,State,44.3,,,Regular Survey,ASER 2023 Rural
+2023,Sikkim,East/NE,3,arithmetic,can_do_subtraction,State,30.2,,,Regular Survey,ASER 2023 Rural
+2023,Sikkim,East/NE,3,reading,can_read_story,State,25.4,,,Regular Survey,ASER 2023 Rural
+2023,Sikkim,East/NE,5,arithmetic,can_do_division,State,33.1,,,Regular Survey,ASER 2023 Rural
+2023,Sikkim,East/NE,5,reading,can_read_story,State,58.1,,,Regular Survey,ASER 2023 Rural
+2023,Tamil Nadu,South,3,arithmetic,can_do_subtraction,State,40.8,,,Regular Survey,ASER 2023 Rural
+2023,Tamil Nadu,South,3,reading,can_read_story,State,38.1,,,Regular Survey,ASER 2023 Rural
+2023,Tamil Nadu,South,5,arithmetic,can_do_division,State,39.1,,,Regular Survey,ASER 2023 Rural
+2023,Tamil Nadu,South,5,reading,can_read_story,State,71.7,,,Regular Survey,ASER 2023 Rural
+2023,Telangana,South,3,arithmetic,can_do_subtraction,State,30.6,,,Regular Survey,ASER 2023 Rural
+2023,Telangana,South,3,reading,can_read_story,State,24.6,,,Regular Survey,ASER 2023 Rural
+2023,Telangana,South,5,arithmetic,can_do_division,State,28.1,,,Regular Survey,ASER 2023 Rural
+2023,Telangana,South,5,reading,can_read_story,State,69.1,,,Regular Survey,ASER 2023 Rural
+2023,Tripura,East/NE,3,arithmetic,can_do_subtraction,State,20.4,,,Regular Survey,ASER 2023 Rural
+2023,Tripura,East/NE,3,reading,can_read_story,State,17.4,,,Regular Survey,ASER 2023 Rural
+2023,Tripura,East/NE,5,arithmetic,can_do_division,State,17.9,,,Regular Survey,ASER 2023 Rural
+2023,Tripura,East/NE,5,reading,can_read_story,State,49.7,,,Regular Survey,ASER 2023 Rural
+2023,Uttar Pradesh,Central,3,arithmetic,can_do_subtraction,State,20.8,,,Regular Survey,ASER 2023 Rural
+2023,Uttar Pradesh,Central,3,reading,can_read_story,State,17.9,,,Regular Survey,ASER 2023 Rural
+2023,Uttar Pradesh,Central,5,arithmetic,can_do_division,State,16.7,,,Regular Survey,ASER 2023 Rural
+2023,Uttar Pradesh,Central,5,reading,can_read_story,State,40.1,,,Regular Survey,ASER 2023 Rural
+2023,Uttarakhand,North,3,arithmetic,can_do_subtraction,State,31.2,,,Regular Survey,ASER 2023 Rural
+2023,Uttarakhand,North,3,reading,can_read_story,State,27.1,,,Regular Survey,ASER 2023 Rural
+2023,Uttarakhand,North,5,arithmetic,can_do_division,State,30.1,,,Regular Survey,ASER 2023 Rural
+2023,Uttarakhand,North,5,reading,can_read_story,State,63.8,,,Regular Survey,ASER 2023 Rural
+2023,West Bengal,East/NE,3,arithmetic,can_do_subtraction,State,28.4,,,Regular Survey,ASER 2023 Rural
+2023,West Bengal,East/NE,3,reading,can_read_story,State,22.6,,,Regular Survey,ASER 2023 Rural
+2023,West Bengal,East/NE,5,arithmetic,can_do_division,State,31.1,,,Regular Survey,ASER 2023 Rural
+2023,West Bengal,East/NE,5,reading,can_read_story,State,62.0,,,Regular Survey,ASER 2023 Rural
