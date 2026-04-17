@@ -1,8 +1,8 @@
 # NIPUN Compass — Streamlit theme (Section 8.3 color palette)
 [theme]
-primaryColor          = "#0F4C5C"   # Deep teal
-backgroundColor       = "#F4F9F9"   # Cool off-white
-secondaryBackgroundColor = "#E1EAEA"
+primaryColor          = "#1F2937"   # Deep teal
+backgroundColor       = "#F9FAFB"   # Cool off-white
+secondaryBackgroundColor = "#E5E7EB"
 textColor             = "#1A1A1A"
 font                  = "sans serif"  # Inter via CSS; falls back to system sans-serif
 

@@ -61,12 +61,12 @@ def render_school_card(row: pd.Series, show_whatsapp: bool = False):
     box-shadow: 0 1px 6px rgba(0,0,0,0.07);
 ">
   <div style="display:flex;align-items:flex-start;gap:1rem">
-    <div style="font-size:2rem;font-weight:800;color:#0F4C5C;min-width:3rem;line-height:1;padding-top:2px">
+    <div style="font-size:2rem;font-weight:800;color:#1F2937;min-width:3rem;line-height:1;padding-top:2px">
       #{int(row['rank'])}
     </div>
     <div style="flex:1;min-width:0">
       <div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;margin-bottom:2px">
-        <span style="font-size:1.05rem;font-weight:700;color:#0F4C5C">{row['school_name']}</span>
+        <span style="font-size:1.05rem;font-weight:700;color:#1F2937">{row['school_name']}</span>
         <span class="urgency-pill" style="background:{border_color}">{urgency}</span>
       </div>
       <div style="font-size:0.82rem;color:#64748B">Block: {row['block']} &nbsp;·&nbsp; {reason}</div>
@@ -84,25 +84,25 @@ def render_school_card(row: pd.Series, show_whatsapp: bool = False):
   <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.4rem;margin-top:0.55rem">
     <div style="font-size:0.68rem;color:#64748B">
       <div style="background:#E2E8F0;height:3px;border-radius:2px;margin-bottom:2px">
-        <div style="width:{r_bar}%;background:#0F4C5C;height:100%;border-radius:2px"></div>
+        <div style="width:{r_bar}%;background:#1F2937;height:100%;border-radius:2px"></div>
       </div>
       Reading · {r_pts:.1f}
     </div>
     <div style="font-size:0.68rem;color:#64748B">
       <div style="background:#E2E8F0;height:3px;border-radius:2px;margin-bottom:2px">
-        <div style="width:{m_bar}%;background:#0F4C5C;height:100%;border-radius:2px"></div>
+        <div style="width:{m_bar}%;background:#1F2937;height:100%;border-radius:2px"></div>
       </div>
       Math · {m_pts:.1f}
     </div>
     <div style="font-size:0.68rem;color:#64748B">
       <div style="background:#E2E8F0;height:3px;border-radius:2px;margin-bottom:2px">
-        <div style="width:{d_bar}%;background:#0F4C5C;height:100%;border-radius:2px"></div>
+        <div style="width:{d_bar}%;background:#1F2937;height:100%;border-radius:2px"></div>
       </div>
       Decline · {d_pts:.1f}
     </div>
     <div style="font-size:0.68rem;color:#64748B">
       <div style="background:#E2E8F0;height:3px;border-radius:2px;margin-bottom:2px">
-        <div style="width:{mo_bar}%;background:#0F4C5C;height:100%;border-radius:2px"></div>
+        <div style="width:{mo_bar}%;background:#1F2937;height:100%;border-radius:2px"></div>
       </div>
       Visit · {mo_pts:.1f}
     </div>

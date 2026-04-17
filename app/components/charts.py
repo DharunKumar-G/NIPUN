@@ -10,15 +10,15 @@ import pandas as pd
 import numpy as np
 
 # Section 8.3 palette
-NAV   = "#0F4C5C"   # deep teal
+NAV   = "#1F2937"   # charcoal
 SAF   = "#F59E0B"   # amber gold
 CRIM  = "#DC2626"   # red
 GRN   = "#16A34A"   # green
 GREY  = "#94A3B8"
-BGND  = "#F4F9F9"
+BGND  = "#F9FAFB"
 
 # Transparent fill variants for area charts
-NAV_FILL  = "rgba(15,76,92,0.07)"
+NAV_FILL  = "rgba(31,41,55,0.07)"
 SAF_FILL  = "rgba(245,158,11,0.08)"
 CRIM_FILL = "rgba(220,38,38,0.07)"
 GRN_FILL  = "rgba(22,163,74,0.08)"
