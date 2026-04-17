@@ -16,7 +16,7 @@ st.markdown(
     <div style='text-align:center;padding:2rem 0 1rem'>
       <h1 style='color:#1F2937;font-size:2.4rem;margin:0'>🧭 NIPUN Compass</h1>
       <p style='color:#64748B;font-size:1.1rem;margin-top:0.5rem'>
-        Data-driven school prioritisation for Bihar Education Department
+        Data-driven school prioritisation for State Education Departments
       </p>
     </div>
     """,
